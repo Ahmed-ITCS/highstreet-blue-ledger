@@ -63,19 +63,19 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for our accountancy theme
+				// Changed from accountax blue to green theme
 				accountax: {
-					50: '#f0f7ff',
-					100: '#e0effe',
-					200: '#bae0fd',
-					300: '#7cc3fb',
-					400: '#36a2f5',
-					500: '#1086e6', // Main brand color
-					600: '#0866c0',
-					700: '#0a529d',
-					800: '#0f4582',
-					900: '#123b6c',
-					950: '#0c2447',
+					50: '#f0faf4',
+					100: '#dbf5e7',
+					200: '#b8e9d0',
+					300: '#7dd4ad',
+					400: '#3fb982',
+					500: '#25a065', // Main brand color
+					600: '#1a8353',
+					700: '#186845',
+					800: '#175339',
+					900: '#144431',
+					950: '#0a2a1e',
 				}
 			},
 			fontFamily: {

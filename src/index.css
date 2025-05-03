@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 210 45% 98%;
-    --foreground: 210 38% 15%;
+    --background: 152 45% 98%;
+    --foreground: 152 38% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 38% 15%;
+    --card-foreground: 152 38% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 38% 15%;
+    --popover-foreground: 152 38% 15%;
 
-    --primary: 210 85% 45%;
+    --primary: 152 85% 45%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 210 38% 15%;
+    --secondary: 152 40% 96%;
+    --secondary-foreground: 152 38% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 152 40% 96.1%;
+    --muted-foreground: 152 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 210 38% 15%;
+    --accent: 152 40% 96.1%;
+    --accent-foreground: 152 38% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 210 85% 45%;
+    --border: 152 31.8% 91.4%;
+    --input: 152 31.8% 91.4%;
+    --ring: 152 85% 45%;
 
     --radius: 0.5rem;
   }
@@ -85,15 +85,15 @@
     @apply backdrop-blur-md bg-white/70;
   }
   
-  .divider-blue {
+  .divider-green {
     @apply inline-block mb-2;
   }
   
-  .divider-blue:before {
+  .divider-green:before {
     @apply content-[''] block h-1 w-10 bg-accountax-500 mb-1;
   }
   
-  .divider-blue:after {
+  .divider-green:after {
     @apply content-[''] block h-1 w-16 bg-accountax-400;
   }
   
