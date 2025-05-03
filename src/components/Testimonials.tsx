@@ -1,8 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
+import { Quote } from "lucide-react";
 
 const Testimonials = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  
   const testimonials = [
     {
       quote: "Highstreet Accountax has transformed our financial operations. Their strategic tax planning saved us over £300,000 last year alone while ensuring full compliance with HMRC regulations.",
@@ -28,12 +31,14 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-24 bg-white relative">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
+    <section id="testimonials" className="py-24 bg-gradient-to-b from-white to-accountax-50/50 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-40 bg-[url('data:image/svg+xml,%3Csvg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Crect width=\"1\" height=\"1\" fill=\"%2325a065\" fill-opacity=\"0.05\"%3E%3C/rect%3E%3C/svg%3E')] opacity-70"></div>
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="text-center mb-16 animate-fade-in-up">
           <div className="inline-block mb-2">
-            <div className="h-1 w-10 bg-accountax-500 mb-1"></div>
-            <div className="h-1 w-16 bg-accountax-400"></div>
+            <div className="h-1 w-10 bg-accountax-500 mb-1 rounded-full"></div>
+            <div className="h-1 w-16 bg-accountax-400 rounded-full"></div>
           </div>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold text-accountax-900 mb-4">Client Success Stories</h2>
           <p className="text-lg text-accountax-600 max-w-3xl mx-auto">
@@ -43,18 +48,27 @@ const Testimonials = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
-              <CardContent className="p-8">
-                <div className="flex justify-between items-start mb-6">
-                  <div className="bg-accountax-50 text-accountax-600 text-xs font-medium py-1 px-3 rounded-full">
+            <Card 
+              key={index} 
+              className={`bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group animate-slide-in-bottom ${index === activeIndex ? 'ring-2 ring-accountax-500/50' : ''}`}
+              style={{ animationDelay: `${0.2 * index}s` }}
+              onClick={() => setActiveIndex(index)}
+            >
+              <CardContent className="p-8 relative">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-accountax-50 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-accountax-100/50 transition-colors duration-500"></div>
+                
+                <div className="flex justify-between items-start mb-6 relative z-10">
+                  <div className="bg-accountax-50 text-accountax-600 text-xs font-medium py-2 px-4 rounded-full shadow-sm">
                     {testimonial.company}
                   </div>
-                  <span className="text-5xl font-serif text-accountax-200 leading-none">"</span>
+                  <Quote size={32} className="text-accountax-200 group-hover:text-accountax-300 transition-colors" />
                 </div>
-                <blockquote className="text-accountax-700 mb-8 italic leading-relaxed">"{testimonial.quote}"</blockquote>
-                <div className="flex items-center pt-6 border-t border-accountax-100">
-                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border border-accountax-100">
-                    <img src={testimonial.image} alt={testimonial.author} className="w-full h-full object-cover" />
+                
+                <blockquote className="text-accountax-700 mb-8 italic leading-relaxed relative z-10">"{testimonial.quote}"</blockquote>
+                
+                <div className="flex items-center pt-6 border-t border-accountax-100 relative z-10">
+                  <div className="w-14 h-14 rounded-full overflow-hidden mr-4 border-2 border-accountax-100 shadow-md">
+                    <img src={testimonial.image} alt={testimonial.author} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                   </div>
                   <div>
                     <p className="font-medium text-accountax-900">{testimonial.author}</p>
@@ -68,9 +82,13 @@ const Testimonials = () => {
         
         <div className="mt-16 text-center">
           <p className="text-accountax-600 mb-6">Join our growing list of satisfied clients</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
+          <div className="flex flex-wrap justify-center items-center gap-8">
             {[...Array(6)].map((_, i) => (
-              <div key={i} className="h-12 w-32 bg-accountax-200/30 rounded-md flex items-center justify-center">
+              <div 
+                key={i} 
+                className="h-12 w-32 bg-white rounded-md flex items-center justify-center shadow-md hover:shadow-lg transition-all backdrop-blur-md animate-slide-in-bottom hover:-translate-y-1"
+                style={{ animationDelay: `${0.1 * (i + 3)}s` }}
+              >
                 <span className="font-medium text-accountax-700">Client {i + 1}</span>
               </div>
             ))}

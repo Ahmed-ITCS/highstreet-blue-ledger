@@ -1,61 +1,81 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ChevronRight, ArrowRight } from "lucide-react";
+import { ChevronRight, ArrowRight, BarChart3, LineChart, Activity } from "lucide-react";
 
 const Hero = () => {
   return (
     <section className="relative py-28 md:py-36 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-accountax-900/95 to-accountax-800 z-0">
+      <div className="absolute inset-0 bg-gradient-to-br from-accountax-900/95 via-accountax-800 to-accountax-700 z-0">
         <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80')] bg-cover bg-center mix-blend-overlay"></div>
+        <div className="absolute inset-0 pattern-bg opacity-10"></div>
+        
+        {/* Animated circles */}
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accountax-500/10 rounded-full filter blur-3xl animate-pulse-gentle"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accountax-400/10 rounded-full filter blur-3xl animate-pulse-gentle" style={{ animationDelay: '1s' }}></div>
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="text-white">
-            <div className="inline-flex items-center px-3 py-1 mb-6 rounded-full bg-accountax-500/20 border border-accountax-400/30">
-              <span className="inline-block w-2 h-2 rounded-full bg-accountax-400 mr-2"></span>
+          <div className="text-white animate-fade-in-up">
+            <div className="inline-flex items-center px-4 py-2 mb-6 rounded-full bg-accountax-500/20 border border-accountax-400/30 backdrop-blur-sm shadow-lg">
+              <span className="inline-block w-2 h-2 rounded-full bg-accountax-400 mr-2 animate-pulse"></span>
               <p className="text-sm font-medium text-accountax-100">Trusted by 500+ UK businesses</p>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight">
-              Accountancy <span className="text-accountax-300">reimagined</span> for the modern business
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight text-shadow">
+              Accountancy <span className="gradient-text bg-gradient-to-r from-accountax-300 to-accountax-100">reimagined</span> for the modern business
             </h1>
+            
+            <div className="w-24 h-1 bg-accountax-500 mb-6 rounded-full overflow-hidden">
+              <div className="h-full w-1/2 bg-white animate-shine"></div>
+            </div>
             
             <p className="text-lg md:text-xl text-accountax-100 mb-8 max-w-xl">
               Highstreet Accountax provides bespoke accounting solutions with unmatched expertise and exceptional client service.
             </p>
             
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button className="bg-accountax-500 hover:bg-accountax-600 text-white py-6 px-8 group transition-all duration-300">
-                Book a Consultation
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <Button className="button-fancy group transition-all duration-300">
+                <span className="relative z-10">Book a Consultation</span>
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform relative z-10" />
               </Button>
-              <Button variant="outline" className="border-accountax-100/30 text-white hover:bg-white/10 py-6 px-8 transition-all duration-300">
+              <Button variant="outline" className="border-accountax-100/30 text-white hover:bg-white/10 py-6 px-8 transition-all duration-300 backdrop-blur">
                 Our Services
               </Button>
             </div>
           </div>
           
           <div className="hidden lg:block">
-            <div className="relative">
-              <div className="absolute -top-10 -right-10 w-72 h-72 bg-accountax-500/30 rounded-full filter blur-3xl"></div>
-              <div className="absolute -bottom-8 -left-8 w-72 h-72 bg-accountax-400/20 rounded-full filter blur-3xl"></div>
+            <div className="relative animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <div className="absolute -top-10 -right-10 w-72 h-72 bg-accountax-500/30 rounded-full filter blur-3xl animate-pulse-gentle"></div>
+              <div className="absolute -bottom-8 -left-8 w-72 h-72 bg-accountax-400/20 rounded-full filter blur-3xl animate-pulse-gentle" style={{ animationDelay: '1.5s' }}></div>
               
-              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10 shadow-2xl relative z-10">
+              {/* Decorative elements */}
+              <div className="absolute -top-16 -left-16 w-32 h-32 border border-accountax-300/20 rounded-full animate-rotate opacity-30"></div>
+              <div className="absolute -bottom-12 -right-12 w-24 h-24 border border-accountax-300/20 rounded-full animate-rotate opacity-30" style={{ animationDirection: 'reverse', animationDuration: '15s' }}></div>
+              
+              <div className="bg-black/40 backdrop-blur-lg p-8 rounded-2xl border border-white/10 shadow-2xl relative z-10">
                 <div className="flex justify-between items-center mb-8">
-                  <h3 className="text-xl font-semibold text-white">Expertise & Reliability</h3>
-                  <span className="text-accountax-300">25+ years</span>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">Expertise & Reliability</h3>
+                    <div className="h-0.5 w-12 bg-accountax-500 mt-2 mb-1"></div>
+                    <div className="h-0.5 w-16 bg-accountax-400"></div>
+                  </div>
+                  <div className="text-accountax-300 bg-accountax-900/50 py-1 px-3 rounded-full text-sm font-medium backdrop-blur-sm border border-accountax-700/50">25+ years</div>
                 </div>
                 
                 <div className="space-y-6">
                   {[
-                    { label: "Client Satisfaction", value: "98%" },
-                    { label: "Tax Returns Filed", value: "10,000+" },
-                    { label: "Tax Saved for Clients", value: "£100M+" }
+                    { label: "Client Satisfaction", value: "98%", icon: <Activity size={16} className="text-accountax-400" /> },
+                    { label: "Tax Returns Filed", value: "10,000+", icon: <BarChart3 size={16} className="text-accountax-400" /> },
+                    { label: "Tax Saved for Clients", value: "£100M+", icon: <LineChart size={16} className="text-accountax-400" /> }
                   ].map((stat, index) => (
-                    <div key={index} className="flex justify-between items-center">
-                      <span className="text-accountax-100">{stat.label}</span>
+                    <div key={index} className="flex justify-between items-center p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors animate-slide-in-bottom" style={{ animationDelay: `${0.2 * index}s` }}>
+                      <span className="text-accountax-100 flex items-center">
+                        <span className="mr-2">{stat.icon}</span>
+                        {stat.label}
+                      </span>
                       <span className="text-white font-semibold">{stat.value}</span>
                     </div>
                   ))}
