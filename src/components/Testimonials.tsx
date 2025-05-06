@@ -32,7 +32,7 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="py-24 bg-gradient-to-b from-white to-accountax-50/50 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-40 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%2325a065%22%20fill-opacity%3D%220.05%22%3E%3C%2Frect%3E%3C%2Fsvg%3E')] opacity-70"></div>
+      <div className="absolute top-0 left-0 w-full h-40 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23008783%22%20fill-opacity%3D%220.05%22%3E%3C%2Frect%3E%3C%2Fsvg%3E')] opacity-70"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">

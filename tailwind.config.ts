@@ -63,19 +63,19 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Changed from accountax blue to green theme
+				// Changed from green to dark teal theme
 				accountax: {
-					50: '#f0faf4',
-					100: '#dbf5e7',
-					200: '#b8e9d0',
-					300: '#7dd4ad',
-					400: '#3fb982',
-					500: '#25a065', // Main brand color
-					600: '#1a8353',
-					700: '#186845',
-					800: '#175339',
-					900: '#144431',
-					950: '#0a2a1e',
+					50: '#e6f3f3',
+					100: '#cce7e6',
+					200: '#99cfce',
+					300: '#66b7b5',
+					400: '#339f9c',
+					500: '#008783', // Main brand color - dark teal
+					600: '#006c69',
+					700: '#00514f',
+					800: '#003634',
+					900: '#001a1a',
+					950: '#000d0d',
 				}
 			},
 			fontFamily: {
