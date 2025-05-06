@@ -6,8 +6,8 @@ import { ChevronRight, ArrowRight, BarChart3, LineChart, Activity } from "lucide
 const Hero = () => {
   return (
     <section className="relative py-28 md:py-36 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-accountax-900/95 via-accountax-800 to-accountax-700 z-0">
-        <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80')] bg-cover bg-center mix-blend-overlay"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-accountax-900/80 via-accountax-800/70 to-accountax-700/60 z-0">
+        <div className="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="absolute inset-0 pattern-bg opacity-10"></div>
         
         {/* Animated circles */}
