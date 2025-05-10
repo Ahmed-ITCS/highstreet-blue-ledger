@@ -99,18 +99,18 @@ const Testimonials = () => {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
-          <div className="flex flex-wrap justify-center items-center gap-8 mt-8">
+        <div className="mt-20 text-center">
+          <div className="flex flex-wrap justify-center items-center gap-10 mt-10">
             {clientLogos.map((client, i) => (
               <div 
                 key={i} 
-                className="h-20 w-auto flex items-center justify-center bg-white rounded-md p-4 shadow-md hover:shadow-lg transition-all backdrop-blur-md animate-slide-in-bottom hover:-translate-y-1"
+                className="h-28 w-auto flex items-center justify-center bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all backdrop-blur-md animate-slide-in-bottom hover:-translate-y-1"
                 style={{ animationDelay: `${0.1 * (i + 3)}s` }}
               >
                 <img 
                   src={client.image} 
                   alt={client.name} 
-                  className="max-h-16 w-auto object-contain" 
+                  className="max-h-20 w-auto object-contain" 
                 />
               </div>
             ))}
