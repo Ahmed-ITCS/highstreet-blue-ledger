@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ArrowRight, BarChart3, LineChart, Activity } from "lucide-react";
+import AnimatedElement from './AnimatedElement';
 
 const Hero = () => {
   return (
@@ -17,25 +18,25 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="text-white animate-fade-in-up">
-            <div className="inline-flex items-center px-4 py-2 mb-6 rounded-full bg-accountax-500/20 border border-accountax-400/30 backdrop-blur-sm shadow-lg">
+          <div className="text-white">
+            <AnimatedElement type="slide-in-left" delay={0.2} className="inline-flex items-center px-4 py-2 mb-6 rounded-full bg-accountax-500/20 border border-accountax-400/30 backdrop-blur-sm shadow-lg">
               <span className="inline-block w-2 h-2 rounded-full bg-accountax-400 mr-2 animate-pulse"></span>
               <p className="text-sm font-medium text-accountax-100">Trusted by 500+ UK businesses</p>
-            </div>
+            </AnimatedElement>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight text-shadow">
+            <AnimatedElement as="h1" type="reveal" delay={0.4} className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight text-shadow">
               Accountancy <span className="gradient-text bg-gradient-to-r from-accountax-300 to-accountax-100">reimagined</span> for the modern business
-            </h1>
+            </AnimatedElement>
             
-            <div className="w-24 h-1 bg-accountax-500 mb-6 rounded-full overflow-hidden">
+            <AnimatedElement type="slide-in-left" delay={0.6} className="w-24 h-1 bg-accountax-500 mb-6 rounded-full overflow-hidden">
               <div className="h-full w-1/2 bg-white animate-shine"></div>
-            </div>
+            </AnimatedElement>
             
-            <p className="text-lg md:text-xl text-accountax-100 mb-8 max-w-xl">
+            <AnimatedElement type="slide-in-right" delay={0.8} className="text-lg md:text-xl text-accountax-100 mb-8 max-w-xl">
               Highstreet Accountax provides bespoke accounting solutions with unmatched expertise and exceptional client service.
-            </p>
+            </AnimatedElement>
             
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <AnimatedElement type="slide-in-bottom" delay={1.0} className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Button className="button-fancy group transition-all duration-300">
                 <span className="relative z-10">Book a Consultation</span>
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform relative z-10" />
@@ -43,11 +44,11 @@ const Hero = () => {
               <Button variant="outline" className="border-accountax-100/30 text-white hover:bg-white/10 py-6 px-8 transition-all duration-300 backdrop-blur">
                 Our Services
               </Button>
-            </div>
+            </AnimatedElement>
           </div>
           
           <div className="hidden lg:block">
-            <div className="relative animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <AnimatedElement type="zoom-in" delay={0.6} className="relative">
               <div className="absolute -top-10 -right-10 w-72 h-72 bg-accountax-500/30 rounded-full filter blur-3xl animate-pulse-gentle"></div>
               <div className="absolute -bottom-8 -left-8 w-72 h-72 bg-accountax-400/20 rounded-full filter blur-3xl animate-pulse-gentle" style={{ animationDelay: '1.5s' }}></div>
               
@@ -71,21 +72,22 @@ const Hero = () => {
                     { label: "Tax Returns Filed", value: "10,000+", icon: <BarChart3 size={16} className="text-accountax-400" />, delay: 0.3 },
                     { label: "Tax Saved for Clients", value: "£100M+", icon: <LineChart size={16} className="text-accountax-400" />, delay: 0.6 }
                   ].map((stat, index) => (
-                    <div 
+                    <AnimatedElement
                       key={index} 
-                      className="flex justify-between items-center p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors animate-slide-in-bottom" 
-                      style={{ animationDelay: `${stat.delay}s` }}
+                      type="slide-in-right"
+                      delay={1 + stat.delay}
+                      className="flex justify-between items-center p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
                     >
                       <span className="text-accountax-100 flex items-center">
                         <span className="mr-2">{stat.icon}</span>
                         {stat.label}
                       </span>
                       <span className="text-white font-semibold animate-number-count">{stat.value}</span>
-                    </div>
+                    </AnimatedElement>
                   ))}
                 </div>
                 
-                <div className="mt-8 pt-6 border-t border-white/10">
+                <AnimatedElement type="slide-in-bottom" delay={1.6} className="mt-8 pt-6 border-t border-white/10">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-1">
                       {[...Array(5)].map((_, i) => (
@@ -96,10 +98,10 @@ const Hero = () => {
                     </div>
                     <img src="/lovable-uploads/c61e23a0-1d76-4412-8400-554190f2dd5f.png" alt="Highstreet Accountax Logo" className="h-10 w-auto animate-fade-in" />
                   </div>
-                  <p className="text-center text-sm text-accountax-100 mt-2 animate-slide-in-bottom" style={{ animationDelay: '0.5s' }}>"The most responsive accountants we've worked with"</p>
-                </div>
+                  <p className="text-center text-sm text-accountax-100 mt-2">"The most responsive accountants we've worked with"</p>
+                </AnimatedElement>
               </div>
-            </div>
+            </AnimatedElement>
           </div>
         </div>
       </div>
