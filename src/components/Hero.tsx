@@ -62,34 +62,41 @@ const Hero = () => {
                     <div className="h-0.5 w-12 bg-accountax-500 mt-2 mb-1"></div>
                     <div className="h-0.5 w-16 bg-accountax-400"></div>
                   </div>
-                  <div className="text-accountax-300 bg-accountax-900/50 py-1 px-3 rounded-full text-sm font-medium backdrop-blur-sm border border-accountax-700/50">25+ years</div>
+                  <div className="text-accountax-300 bg-accountax-900/50 py-1 px-3 rounded-full text-sm font-medium backdrop-blur-sm border border-accountax-700/50">8+ years</div>
                 </div>
                 
                 <div className="space-y-6">
                   {[
-                    { label: "Client Satisfaction", value: "98%", icon: <Activity size={16} className="text-accountax-400" /> },
-                    { label: "Tax Returns Filed", value: "10,000+", icon: <BarChart3 size={16} className="text-accountax-400" /> },
-                    { label: "Tax Saved for Clients", value: "£100M+", icon: <LineChart size={16} className="text-accountax-400" /> }
+                    { label: "Client Satisfaction", value: "98%", icon: <Activity size={16} className="text-accountax-400" />, delay: 0 },
+                    { label: "Tax Returns Filed", value: "10,000+", icon: <BarChart3 size={16} className="text-accountax-400" />, delay: 0.3 },
+                    { label: "Tax Saved for Clients", value: "£100M+", icon: <LineChart size={16} className="text-accountax-400" />, delay: 0.6 }
                   ].map((stat, index) => (
-                    <div key={index} className="flex justify-between items-center p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors animate-slide-in-bottom" style={{ animationDelay: `${0.2 * index}s` }}>
+                    <div 
+                      key={index} 
+                      className="flex justify-between items-center p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors animate-slide-in-bottom" 
+                      style={{ animationDelay: `${stat.delay}s` }}
+                    >
                       <span className="text-accountax-100 flex items-center">
                         <span className="mr-2">{stat.icon}</span>
                         {stat.label}
                       </span>
-                      <span className="text-white font-semibold">{stat.value}</span>
+                      <span className="text-white font-semibold animate-number-count">{stat.value}</span>
                     </div>
                   ))}
                 </div>
                 
                 <div className="mt-8 pt-6 border-t border-white/10">
-                  <div className="flex items-center justify-center space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-yellow-400">
-                        <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
-                      </svg>
-                    ))}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-yellow-400 animate-pulse-gentle" style={{ animationDelay: `${i * 0.1}s` }}>
+                          <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                        </svg>
+                      ))}
+                    </div>
+                    <img src="/lovable-uploads/c61e23a0-1d76-4412-8400-554190f2dd5f.png" alt="Highstreet Accountax Logo" className="h-10 w-auto animate-fade-in" />
                   </div>
-                  <p className="text-center text-sm text-accountax-100 mt-2">"The most responsive accountants we've worked with"</p>
+                  <p className="text-center text-sm text-accountax-100 mt-2 animate-slide-in-bottom" style={{ animationDelay: '0.5s' }}>"The most responsive accountants we've worked with"</p>
                 </div>
               </div>
             </div>

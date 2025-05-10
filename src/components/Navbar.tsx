@@ -1,7 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronRight, ChevronDown } from "lucide-react";
+import { Link } from 'react-router-dom';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,11 +27,20 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const services = [
+    { name: 'Tax Advisory', href: '/services/tax-advisory' },
+    { name: 'Audit & Assurance', href: '/services/audit-assurance' },
+    { name: 'Business Advisory', href: '/services/business-advisory' },
+    { name: 'Corporate Finance', href: '/services/corporate-finance' },
+    { name: 'Outsourcing', href: '/services/outsourcing' },
+    { name: 'International Services', href: '/services/international' },
+  ];
+
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'Services', href: '#services' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '#services', hasDropdown: true, items: services },
     { name: 'About', href: '#about' },
-    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'Team', href: '/team' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -33,7 +49,10 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <a href="#" className="flex items-center group">
+            <Link to="/" className="flex items-center group">
+              <div className="mr-3 w-8 h-8">
+                <img src="/lovable-uploads/c61e23a0-1d76-4412-8400-554190f2dd5f.png" alt="Logo" className="w-full h-full object-contain" />
+              </div>
               <span className={`text-2xl font-serif font-bold ${scrolled ? 'text-accountax-800' : 'text-white'} transition-colors duration-300 flex items-center`}>
                 <span className="relative z-10 animate-wiggle">High</span>
                 <span className="text-accountax-400">street</span>
@@ -42,25 +61,47 @@ const Navbar = () => {
                   <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-accountax-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                 </span>
               </span>
-            </a>
+            </Link>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className={`font-medium transition-colors hover:text-accountax-500 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:-bottom-1 after:left-0 after:bg-accountax-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
-                  scrolled ? 'text-accountax-800' : 'text-white'
-                }`}
-              >
-                {link.name}
-              </a>
+              link.hasDropdown ? (
+                <DropdownMenu key={link.name}>
+                  <DropdownMenuTrigger className={`font-medium transition-colors hover:text-accountax-500 flex items-center focus:outline-none ${
+                    scrolled ? 'text-accountax-800' : 'text-white'
+                  }`}>
+                    {link.name}
+                    <ChevronDown className="ml-1 h-4 w-4" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="center" className="w-56 bg-white/95 backdrop-blur-md border-accountax-100/20">
+                    {link.items?.map((item) => (
+                      <DropdownMenuItem key={item.name} asChild>
+                        <Link to={item.href} className="cursor-pointer text-accountax-800 hover:text-accountax-500 hover:bg-accountax-50 transition-all">
+                          {item.name}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className={`font-medium transition-colors hover:text-accountax-500 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:-bottom-1 after:left-0 after:bg-accountax-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
+                    scrolled ? 'text-accountax-800' : 'text-white'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
-            <Button className="bg-accountax-500 hover:bg-accountax-600 text-white shadow-lg hover:shadow-xl hover:shadow-accountax-500/20 transition-all">
-              <span>Free Consultation</span>
-              <ChevronRight className="ml-1 h-4 w-4" />
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-accountax-500 hover:bg-accountax-600 text-white shadow-lg hover:shadow-xl hover:shadow-accountax-500/20 transition-all">
+                <span>Free Consultation</span>
+                <ChevronRight className="ml-1 h-4 w-4" />
+              </Button>
+            </Link>
           </nav>
           
           <div className="md:hidden">
@@ -80,20 +121,43 @@ const Navbar = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg border-t border-accountax-100/20 animate-slide-in-bottom">
           <div className="container mx-auto px-4 py-5 space-y-4">
             {navLinks.map((link, index) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={toggleMenu}
-                className="block text-accountax-800 hover:text-accountax-500 font-medium transition-colors py-2 border-b border-accountax-100/20 animate-slide-in-bottom"
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                {link.name}
-              </a>
+              link.hasDropdown ? (
+                <div key={link.name} className="space-y-2">
+                  <div className="font-medium text-accountax-800 py-2 border-b border-accountax-100/20 animate-slide-in-bottom" style={{ animationDelay: `${index * 0.05}s` }}>
+                    {link.name}
+                  </div>
+                  <div className="ml-4 space-y-2">
+                    {link.items?.map((item, subIndex) => (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        onClick={toggleMenu}
+                        className="block text-accountax-700 hover:text-accountax-500 font-medium transition-colors py-1 animate-slide-in-bottom"
+                        style={{ animationDelay: `${index * 0.05 + subIndex * 0.03}s` }}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  onClick={toggleMenu}
+                  className="block text-accountax-800 hover:text-accountax-500 font-medium transition-colors py-2 border-b border-accountax-100/20 animate-slide-in-bottom"
+                  style={{ animationDelay: `${index * 0.05}s` }}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
-            <Button className="w-full bg-accountax-500 hover:bg-accountax-600 text-white animate-slide-in-bottom" style={{ animationDelay: '0.25s' }}>
-              Free Consultation
-              <ChevronRight className="ml-1 h-4 w-4" />
-            </Button>
+            <Link to="/contact">
+              <Button className="w-full bg-accountax-500 hover:bg-accountax-600 text-white animate-slide-in-bottom" style={{ animationDelay: '0.25s' }}>
+                Free Consultation
+                <ChevronRight className="ml-1 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       )}

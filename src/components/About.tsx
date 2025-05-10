@@ -2,10 +2,11 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const stats = [
-    { value: '25+', label: 'Years of Experience' },
+    { value: '8+', label: 'Years of Experience' },
     { value: '500+', label: 'Clients Served' },
     { value: '£100M+', label: 'Client Tax Savings' },
     { value: '98%', label: 'Client Retention Rate' },
@@ -74,7 +75,7 @@ const About = () => {
               
               <div className="space-y-6">
                 <p className="text-accountax-700">
-                  Established in London, Highstreet Accountax has been providing exceptional accounting services to UK businesses for over 25 years. Our experienced team of chartered accountants works closely with clients to understand their unique challenges and deliver tailored financial solutions.
+                  Established in London, Highstreet Accountax has been providing exceptional accounting services to UK businesses for over 8 years. Our experienced team of chartered accountants works closely with clients to understand their unique challenges and deliver tailored financial solutions.
                 </p>
                 
                 <p className="text-accountax-700">
@@ -87,9 +88,11 @@ const About = () => {
               </div>
               
               <div className="flex flex-wrap gap-4 mt-8">
-                <Button className="button-fancy bg-accountax-700 hover:bg-accountax-800 text-white group">
-                  <span className="relative z-10">Meet Our Team</span>
-                </Button>
+                <Link to="/team">
+                  <Button className="button-fancy bg-accountax-700 hover:bg-accountax-800 text-white group">
+                    <span className="relative z-10">Meet Our Team</span>
+                  </Button>
+                </Link>
                 <Button variant="outline" className="border-accountax-700 text-accountax-700 hover:bg-accountax-50">
                   Our Approach
                 </Button>
@@ -99,25 +102,26 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { title: "ICAEW Member Firm", desc: "Chartered accountants committed to the highest professional standards" },
-                { title: "Industry Specialization", desc: "Deep expertise across various sectors including technology and manufacturing" },
+                { title: "Meet the Team", desc: "Experienced professionals dedicated to your financial success", link: "/team" },
                 { title: "Client-Centric Focus", desc: "Tailored solutions that address your specific business challenges" }
               ].map((item, index) => (
-                <div 
-                  key={index} 
-                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-accountax-100/20 hover:border-accountax-300/30 relative overflow-hidden group animate-slide-in-bottom"
-                  style={{ animationDelay: `${0.5 + (0.1 * index)}s` }}
-                >
-                  <div className="absolute top-0 left-0 h-full w-1 bg-accountax-500/30 group-hover:bg-accountax-500 transition-colors duration-300"></div>
-                  <div className="pl-3">
-                    <div className="flex items-center mb-3">
-                      <div className="mr-2 text-accountax-500">
-                        <Check size={18} />
+                <Link key={index} to={item.link || "#"} className="block">
+                  <div 
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-accountax-100/20 hover:border-accountax-300/30 relative overflow-hidden group animate-slide-in-bottom h-full"
+                    style={{ animationDelay: `${0.5 + (0.1 * index)}s` }}
+                  >
+                    <div className="absolute top-0 left-0 h-full w-1 bg-accountax-500/30 group-hover:bg-accountax-500 transition-colors duration-300"></div>
+                    <div className="pl-3">
+                      <div className="flex items-center mb-3">
+                        <div className="mr-2 text-accountax-500">
+                          <Check size={18} />
+                        </div>
+                        <h3 className="font-serif text-lg font-semibold text-accountax-800 group-hover:text-accountax-600 transition-colors">{item.title}</h3>
                       </div>
-                      <h3 className="font-serif text-lg font-semibold text-accountax-800 group-hover:text-accountax-600 transition-colors">{item.title}</h3>
+                      <p className="text-accountax-600 text-sm pl-7">{item.desc}</p>
                     </div>
-                    <p className="text-accountax-600 text-sm pl-7">{item.desc}</p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
