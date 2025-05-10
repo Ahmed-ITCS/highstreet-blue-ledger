@@ -30,6 +30,25 @@ const Testimonials = () => {
     },
   ];
 
+  const clientLogos = [
+    {
+      name: "Receipt Bank",
+      image: "/lovable-uploads/f0688af9-1c64-4844-8b62-0c9b00f4de58.png",
+    },
+    {
+      name: "QuickBooks",
+      image: "/lovable-uploads/667f6c57-b4f8-4b52-8336-e0fd019e6fe2.png",
+    },
+    {
+      name: "Xero",
+      image: "/lovable-uploads/8c03e02a-0caa-408a-b794-a97cccdc23d6.png",
+    },
+    {
+      name: "ACCA",
+      image: "/lovable-uploads/d112c0dc-7475-4f3c-bbf2-407447f73b08.png",
+    }
+  ];
+
   return (
     <section id="testimonials" className="py-24 bg-gradient-to-b from-white to-accountax-50/50 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-40 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23008783%22%20fill-opacity%3D%220.05%22%3E%3C%2Frect%3E%3C%2Fsvg%3E')] opacity-70"></div>
@@ -81,15 +100,18 @@ const Testimonials = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <p className="text-accountax-600 mb-6">Join our growing list of satisfied clients</p>
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {[...Array(6)].map((_, i) => (
+          <div className="flex flex-wrap justify-center items-center gap-8 mt-8">
+            {clientLogos.map((client, i) => (
               <div 
                 key={i} 
-                className="h-12 w-32 bg-white rounded-md flex items-center justify-center shadow-md hover:shadow-lg transition-all backdrop-blur-md animate-slide-in-bottom hover:-translate-y-1"
+                className="h-20 w-auto flex items-center justify-center bg-white rounded-md p-4 shadow-md hover:shadow-lg transition-all backdrop-blur-md animate-slide-in-bottom hover:-translate-y-1"
                 style={{ animationDelay: `${0.1 * (i + 3)}s` }}
               >
-                <span className="font-medium text-accountax-700">Client {i + 1}</span>
+                <img 
+                  src={client.image} 
+                  alt={client.name} 
+                  className="max-h-16 w-auto object-contain" 
+                />
               </div>
             ))}
           </div>
