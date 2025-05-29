@@ -73,15 +73,15 @@ const Contact = () => {
                   <tbody>
                     <tr className="border-b border-accountax-100">
                       <td className="py-3 text-accountax-600">Monday - Friday</td>
-                      <td className="py-3 text-accountax-800 font-medium">9:00 AM - 5:30 PM</td>
+                      <td className="py-3 text-accountax-800 font-medium">9:00 AM - 9:00 PM</td>
                     </tr>
                     <tr className="border-b border-accountax-100">
                       <td className="py-3 text-accountax-600">Saturday</td>
-                      <td className="py-3 text-accountax-800 font-medium">By Appointment</td>
+                      <td className="py-3 text-accountax-800 font-medium">10:00 AM - 4:00 PM</td>
                     </tr>
                     <tr>
-                      <td className="py-3 text-accountax-600">Sunday</td>
-                      <td className="py-3 text-accountax-800 font-medium">Closed</td>
+                      <td className="py-3 text-accountax-600">Appointments</td>
+                      <td className="py-3 text-accountax-800 font-medium">7 days a week</td>
                     </tr>
                   </tbody>
                 </table>
