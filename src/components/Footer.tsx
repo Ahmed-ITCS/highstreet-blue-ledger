@@ -154,7 +154,6 @@ const Footer = () => {
               © {currentYear} Highstreet Accountax Ltd. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 bg-accountax-800/30 p-2 rounded-lg">
-              <img src="https://www.icaew.com/-/media/corporate/images/about-icaew/who-we-are/icaew-logo.ashx" alt="ICAEW Logo" className="h-8" />
             </div>
           </div>
         </AnimatedElement>
