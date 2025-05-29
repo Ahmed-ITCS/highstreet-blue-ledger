@@ -86,7 +86,7 @@ const Services = () => {
             <Card 
               key={index} 
               className="card-elegant group animate-slide-in-bottom"
-              style={{ animationDelay: `${0.1 * index}s` }}
+              style={{ animationDelay: `${0.15 * index}s` }}
             >
               <CardHeader className="relative z-10 pb-2">
                 <div className="mb-4 p-4 bg-accountax-50 inline-flex rounded-2xl group-hover:bg-accountax-100 transition-colors duration-300 shadow-md">
