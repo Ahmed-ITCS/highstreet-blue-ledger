@@ -5,13 +5,19 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const services = [
-    { name: 'Tax Planning', href: '#' },
-    { name: 'Accounting & Bookkeeping', href: '#' },
-    { name: 'Business Advisory', href: '#' },
-    { name: 'Payroll Services', href: '#' },
-    { name: 'VAT Returns', href: '#' },
-    { name: 'Audit & Assurance', href: '#' },
+    { name: 'Book Keeping', href: '/services/book-keeping' },
+    { name: 'Self Assessment Tax', href: '/services/self-assessment-tax' },
+    { name: 'Capital Gains tax ', href: '/services/capital-gains-tax' },
+    { name: 'Payroll', href: '/services/payroll' },
+    { name: 'Accounts Managment ', href: '/services/accounts-management' },
+    { name: 'Cloud Accounting ', href: '/services/cloud-accounting' },
+    { name: 'Corporation Tax ', href: '/services/corporation-tax' },
+    { name: 'HMRC Tax Investigations', href: '/services/hmrc-tax-investigations' },
+    { name: 'Vat Returns', href: '/services/vat-returns' },
+    { name: 'Year End Accounts', href: '/services/year-end-accounts' },
+
   ];
+  
   
   const company = [
     { name: 'About Us', href: '#about' },
