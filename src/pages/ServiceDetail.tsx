@@ -113,7 +113,7 @@ const serviceData = {
     ]
   },
   'corporation-tax': {
-    title: "Corporation Tax",
+    title: "Corporation Tax CT600",
     description: "Our corporation tax service assists businesses in navigating the complexities of corporation tax regulations to ensure full compliance while optimizing tax liabilities. We prepare accurate corporation tax returns, identify all available reliefs and allowances, and develop strategies to reduce your tax burden legally. Our experts keep abreast of the latest changes in tax legislation and provide tailored advice that supports your business’s financial goals and growth plans.",
     content: [
       "We assist businesses in calculating and filing corporation tax returns accurately and on time.",

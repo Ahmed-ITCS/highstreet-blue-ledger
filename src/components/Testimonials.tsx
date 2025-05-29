@@ -41,8 +41,8 @@ const Testimonials = () => {
       image: "/lovable-uploads/667f6c57-b4f8-4b52-8336-e0fd019e6fe2.png",
     },
     {
-      name: "Xero",
-      image: "/lovable-uploads/8c03e02a-0caa-408a-b794-a97cccdc23d6.png",
+      name: "FreeAgent",
+      image: "/lovable-uploads/freeagent.png",
     },
     {
       name: "ACCA",

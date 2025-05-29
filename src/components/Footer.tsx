@@ -12,10 +12,12 @@ const Footer = () => {
     { name: 'Payroll', href: '/services/payroll' },
     { name: 'Accounts Managment ', href: '/services/accounts-management' },
     { name: 'Cloud Accounting ', href: '/services/cloud-accounting' },
-    { name: 'Corporation Tax ', href: '/services/corporation-tax' },
+    { name: 'Corporation Tax CT600', href: '/services/corporation-tax' },
     { name: 'HMRC Tax Investigations', href: '/services/hmrc-tax-investigations' },
     { name: 'Vat Returns', href: '/services/vat-returns' },
     { name: 'Year End Accounts', href: '/services/year-end-accounts' },
+    { name: 'Contractor Accountings', href: '/services/contractor-accounting' },
+    { name: 'Limited-Liability-Partnerships', href: '/services/limited-liability-partnerships' },
 
   ];
   

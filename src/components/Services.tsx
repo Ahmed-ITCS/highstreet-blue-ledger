@@ -38,7 +38,7 @@ const Services = () => {
       icon: <FileText className="h-10 w-10 text-accountax-500" />,
     },
     {
-      title: "Corporation Tax",
+      title: "Corporation Tax CT600",
       description: "Comprehensive corporation tax services to ensure compliance, optimize tax efficiency, and support your business growth.",
       icon: <Banknote className="h-10 w-10 text-accountax-500" />,
     },
