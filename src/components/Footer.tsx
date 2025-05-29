@@ -139,11 +139,7 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 p-4 bg-accountax-800/50 rounded-lg border border-accountax-700/50">
-                <p className="text-accountax-300 text-sm">
-                  Highstreet Accountax Ltd is regulated by the Institute of Chartered Accountants in England and Wales.
-                </p>
-              </div>
+              
             </div>
           </AnimatedElement>
         </div>
