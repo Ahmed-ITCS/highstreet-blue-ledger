@@ -19,7 +19,7 @@ const AnimatedElement: React.FC<AnimatedElementProps> = ({
   children,
   type = 'fade-in',
   delay = 0,
-  duration = 0.8, // Increased from 0.7 to 0.8
+  duration = 1.2, // Increased from 0.8 to 1.2
   className = '',
   threshold = 0.1,
   as: Component = 'div',

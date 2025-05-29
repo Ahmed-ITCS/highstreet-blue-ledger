@@ -43,7 +43,7 @@ const Footer = () => {
       
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-          <AnimatedElement type="slide-in-left" delay={0.2}>
+          <AnimatedElement type="slide-in-left" delay={0.8}>
             <div>
               <div className="mb-6">
                 <a href="#" className="inline-block">
@@ -85,7 +85,7 @@ const Footer = () => {
             </div>
           </AnimatedElement>
           
-          <AnimatedElement type="slide-in-left" delay={0.4}>
+          <AnimatedElement type="slide-in-left" delay={1.2}>
             <div>
               <h3 className="text-lg font-semibold mb-4 text-white relative inline-block">
                 Services
@@ -104,7 +104,7 @@ const Footer = () => {
             </div>
           </AnimatedElement>
           
-          <AnimatedElement type="slide-in-right" delay={0.6}>
+          <AnimatedElement type="slide-in-right" delay={1.6}>
             <div>
               <h3 className="text-lg font-semibold mb-4 text-white relative inline-block">
                 Company
@@ -123,7 +123,7 @@ const Footer = () => {
             </div>
           </AnimatedElement>
           
-          <AnimatedElement type="slide-in-right" delay={0.8}>
+          <AnimatedElement type="slide-in-right" delay={2.0}>
             <div>
               <h3 className="text-lg font-semibold mb-4 text-white relative inline-block">
                 Legal
@@ -148,7 +148,7 @@ const Footer = () => {
           </AnimatedElement>
         </div>
         
-        <AnimatedElement type="slide-in-bottom" delay={1.0}>
+        <AnimatedElement type="slide-in-bottom" delay={2.4}>
           <div className="border-t border-accountax-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
             <p className="text-accountax-300 text-sm">
               © {currentYear} Highstreet Accountax Ltd. All rights reserved.

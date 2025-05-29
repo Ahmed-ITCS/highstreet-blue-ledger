@@ -30,7 +30,7 @@ const OfficePictures = () => {
       <div className="absolute inset-0 pattern-bg opacity-5"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative">
-        <AnimatedElement type="fade-in" delay={0.3} className="text-center mb-16">
+        <AnimatedElement type="fade-in" delay={0.8} className="text-center mb-16">
           <div className="inline-block mb-2">
             <div className="h-1 w-10 bg-accountax-500 mb-1"></div>
             <div className="h-1 w-16 bg-accountax-400"></div>
@@ -49,7 +49,7 @@ const OfficePictures = () => {
             <AnimatedElement
               key={index}
               type={index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}
-              delay={0.4 + (index * 0.3)}
+              delay={1.2 + (index * 0.6)}
               className="overflow-hidden rounded-xl shadow-lg"
             >
               <AspectRatio ratio={index === 0 ? 16/9 : index === 3 ? 1/1 : 3/4}>
@@ -65,7 +65,7 @@ const OfficePictures = () => {
 
         {/* Mobile Carousel */}
         <div className="lg:hidden">
-          <AnimatedElement type="slide-in-bottom" delay={0.5}>
+          <AnimatedElement type="slide-in-bottom" delay={1.5}>
             <Carousel className="w-full">
               <CarouselContent>
                 {officeImages.map((image, index) => (
@@ -88,7 +88,7 @@ const OfficePictures = () => {
           </AnimatedElement>
         </div>
 
-        <AnimatedElement type="slide-in-bottom" delay={0.8} className="mt-12 text-center">
+        <AnimatedElement type="slide-in-bottom" delay={3.6} className="mt-12 text-center">
           <p className="text-accountax-700 text-lg font-medium">
             Visit our offices in London, Manchester, Birmingham and Edinburgh
           </p>

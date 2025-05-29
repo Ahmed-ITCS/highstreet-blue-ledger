@@ -55,7 +55,7 @@ const Testimonials = () => {
       <div className="absolute top-0 left-0 w-full h-40 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23008783%22%20fill-opacity%3D%220.05%22%3E%3C%2Frect%3E%3C%2Fsvg%3E')] opacity-70"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <AnimatedElement type="slide-in-left" delay={0.2} className="text-center mb-16">
+        <AnimatedElement type="slide-in-left" delay={0.8} className="text-center mb-16">
           <div className="inline-block mb-2">
             <div className="h-1 w-10 bg-accountax-500 mb-1 rounded-full"></div>
             <div className="h-1 w-16 bg-accountax-400 rounded-full"></div>
@@ -71,7 +71,7 @@ const Testimonials = () => {
             <AnimatedElement
               key={index}
               type={index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}
-              delay={0.4 + (index * 0.3)}
+              delay={1.5 + (index * 0.8)}
             >
               <Card 
                 className={`bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group ${index === activeIndex ? 'ring-2 ring-accountax-500/50' : ''}`}
@@ -110,7 +110,7 @@ const Testimonials = () => {
               <AnimatedElement
                 key={i}
                 type={i % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}
-                delay={1.3 + (i * 0.2)}
+                delay={3.9 + (i * 0.5)}
               >
                 <div className="h-28 w-auto flex items-center justify-center bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all backdrop-blur-md hover:-translate-y-1">
                   <img 

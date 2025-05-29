@@ -35,7 +35,7 @@ const About = () => {
                   <AnimatedElement
                     key={index}
                     type={index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}
-                    delay={0.2 + (index * 0.3)}
+                    delay={0.8 + (index * 0.6)}
                   >
                     <div className="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 group border border-accountax-100/20 hover:border-accountax-200">
                       <div className="text-3xl font-serif font-bold text-accountax-500 mb-2 group-hover:scale-110 transition-transform origin-left">{stat.value}</div>
@@ -45,7 +45,7 @@ const About = () => {
                 ))}
               </div>
               
-              <AnimatedElement type="slide-in-left" delay={1.4}>
+              <AnimatedElement type="slide-in-left" delay={3.2}>
                 <div className="bg-white p-8 rounded-xl shadow-xl border-l-4 border-accountax-500 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-24 h-24 bg-accountax-50 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                   <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-accountax-50 rounded-full"></div>
@@ -69,7 +69,7 @@ const About = () => {
           </div>
           
           <div className="lg:col-span-3 order-1 lg:order-2">
-            <AnimatedElement type="slide-in-right" delay={0.3} className="mb-16">
+            <AnimatedElement type="slide-in-right" delay={0.6} className="mb-16">
               <div className="inline-block mb-2">
                 <div className="h-1 w-10 bg-accountax-500 mb-1"></div>
                 <div className="h-1 w-16 bg-accountax-400"></div>
@@ -112,7 +112,7 @@ const About = () => {
                 <AnimatedElement
                   key={index}
                   type={index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}
-                  delay={1.6 + (index * 0.3)}
+                  delay={3.8 + (index * 0.6)}
                 >
                   <Link to={item.link || "#"} className="block">
                     <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-accountax-100/20 hover:border-accountax-300/30 relative overflow-hidden group h-full">

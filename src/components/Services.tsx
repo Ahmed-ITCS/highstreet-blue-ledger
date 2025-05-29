@@ -69,7 +69,7 @@ const Services = () => {
       <div className="absolute inset-0 pattern-bg opacity-5"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative">
-        <AnimatedElement type="slide-in-left" delay={0.2} className="text-center mb-16">
+        <AnimatedElement type="slide-in-left" delay={0.5} className="text-center mb-16">
           <div className="inline-block mb-2">
             <div className="h-1 w-10 bg-accountax-500 mb-1"></div>
             <div className="h-1 w-16 bg-accountax-400"></div>
@@ -87,7 +87,7 @@ const Services = () => {
             <AnimatedElement 
               key={index}
               type={index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}
-              delay={0.4 + (index * 0.2)}
+              delay={1.0 + (index * 0.4)}
             >
               <Card className="card-elegant group h-full">
                 <CardHeader className="relative z-10 pb-2">

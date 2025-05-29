@@ -14,7 +14,7 @@ const Contact = () => {
       <div className="absolute -bottom-20 right-1/3 w-80 h-80 rounded-full bg-accountax-300 opacity-10 filter blur-3xl"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <AnimatedElement type="slide-in-left" delay={0.2} className="text-center mb-16">
+        <AnimatedElement type="slide-in-left" delay={0.8} className="text-center mb-16">
           <div className="inline-block mb-4">
             <span className="px-3 py-1 bg-accountax-100 text-accountax-700 text-sm font-medium rounded-full">Get in Touch</span>
           </div>
@@ -25,7 +25,7 @@ const Contact = () => {
         </AnimatedElement>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <AnimatedElement type="slide-in-left" delay={0.4}>
+          <AnimatedElement type="slide-in-left" delay={1.2}>
             <div className="bg-gradient-to-br from-accountax-50 to-blue-50 rounded-xl p-8 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 h-40 w-40 bg-accountax-100 opacity-40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
               <div className="relative">
@@ -92,7 +92,7 @@ const Contact = () => {
             </div>
           </AnimatedElement>
           
-          <AnimatedElement type="slide-in-right" delay={0.6}>
+          <AnimatedElement type="slide-in-right" delay={1.6}>
             <div className="bg-white rounded-xl p-8 shadow-xl relative before:absolute before:content-[''] before:top-4 before:right-4 before:-z-10 before:w-full before:h-full before:bg-accountax-100/30 before:rounded-xl">
               <form className="space-y-6">
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
