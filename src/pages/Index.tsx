@@ -6,6 +6,7 @@ import Services from '@/components/Services';
 import About from '@/components/About';
 import Testimonials from '@/components/Testimonials';
 import OfficePictures from '@/components/OfficePictures';
+import PricingCard from '@/components/PricingCard';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -23,6 +24,7 @@ const Index = () => {
         <Services />
         <About />
         <OfficePictures />
+        <PricingCard />
         <Testimonials />
         <Contact />
       </main>
