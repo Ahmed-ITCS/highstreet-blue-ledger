@@ -47,6 +47,18 @@ const Testimonials = () => {
     {
       name: "ACCA",
       image: "/lovable-uploads/d112c0dc-7475-4f3c-bbf2-407447f73b08.png",
+    },
+    {
+      name: "ISO",
+      image: "/lovable-uploads/ISO.webp",
+    },
+    {
+      name: "SAGE",
+      image: "/lovable-uploads/sage.png",
+    },
+    {
+      name: "XERO",
+      image: "/lovable-uploads/xero.png",
     }
   ];
 

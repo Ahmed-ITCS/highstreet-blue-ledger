@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const services = [
-    { name: 'Book Keeping', href: '/services/book-keeping' },
+    { name: 'BookKeeping', href: '/services/book-keeping' },
     { name: 'Self Assessment Tax', href: '/services/self-assessment-tax' },
     { name: 'Capital Gains tax ', href: '/services/capital-gains-tax' },
     { name: 'Payroll', href: '/services/payroll' },
