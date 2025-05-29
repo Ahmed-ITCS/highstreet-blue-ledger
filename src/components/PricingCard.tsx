@@ -7,12 +7,6 @@ import AnimatedElement from './AnimatedElement';
 
 const PricingCard = () => {
   const features = [
-    "Monthly bookkeeping",
-    "VAT returns",
-    "Annual accounts preparation",
-    "Basic tax advice",
-    "Email support",
-    "Quarterly business review",
     "First 12 hours free consultation",
   ];
 
@@ -27,7 +21,7 @@ const PricingCard = () => {
             <span className="px-3 py-1 bg-accountax-100 text-accountax-700 text-sm font-medium rounded-full">Special Offer</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold text-accountax-900 mb-4">
-            Start Your Journey with Our <span className="gradient-text bg-gradient-to-r from-accountax-700 to-accountax-500">Essential Packages</span>
+            Start Your Journey with Our <span className="gradient-text bg-gradient-to-r from-accountax-700 to-accountax-500">packages starting from</span>
           </h2>
           <p className="text-lg text-accountax-600 max-w-2xl mx-auto">
             Perfect for small businesses and startups looking for professional accounting support
@@ -46,16 +40,15 @@ const PricingCard = () => {
                     Most Popular
                   </span>
                 </div>
-                <CardTitle className="text-2xl font-serif font-semibold text-accountax-800">Essential Package</CardTitle>
+                <CardTitle className="text-2xl font-serif font-semibold text-accountax-800">Packages Starting From</CardTitle>
                 <CardDescription className="text-accountax-600 mt-2">
-                  Cheapest package Starts at
                 </CardDescription>
                 <div className="mt-6">
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-accountax-700">£20</span>
                     <span className="text-accountax-500 ml-1">/month</span>
                   </div>
-                  <p className="text-sm text-accountax-500 mt-1">Starting from</p>
+                  <p className="text-sm text-accountax-500 mt-1"></p>
                 </div>
               </CardHeader>
               
