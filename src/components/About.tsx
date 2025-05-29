@@ -9,7 +9,7 @@ const About = () => {
   const stats = [
     { value: '8+', label: 'Years of Experience' },
     { value: '500+', label: 'Clients Served' },
-    { value: '£100M+', label: 'Client Tax Savings' },
+    //{ value: '£100M+', label: 'Client Tax Savings' },
     { value: '98%', label: 'Client Retention Rate' },
   ];
 
