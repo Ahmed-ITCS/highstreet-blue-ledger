@@ -28,12 +28,24 @@ const Navbar = () => {
   };
 
   const services = [
+    { name: 'Book Keeping', href: '/services/book-keeping' },
+    { name: 'Self Assessment Tax', href: '/services/self-assessment-tax' },
+    { name: 'Capital Gains tax ', href: '/services/capital-gains-tax' },
+    { name: 'Payroll', href: '/services/payroll' },
+    { name: 'Accounts Managment ', href: '/services/accounts-management' },
+    { name: 'Cloud Accounting ', href: '/services/cloud-accounting' },
+    { name: 'Corporation Tax ', href: '/services/corporation-tax' },
+    { name: 'HMRC Tax Investigations', href: '/services/hmrc-tax-investigations' },
+    { name: 'Vat Returns', href: '/services/vat-returns' },
+    { name: 'Year End Accounts', href: '/services/year-end-accounts' },
+
+    /*
     { name: 'Tax Advisory', href: '/services/tax-advisory' },
     { name: 'Audit & Assurance', href: '/services/audit-assurance' },
     { name: 'Business Advisory', href: '/services/business-advisory' },
     { name: 'Corporate Finance', href: '/services/corporate-finance' },
     { name: 'Outsourcing', href: '/services/outsourcing' },
-    { name: 'International Services', href: '/services/international' },
+    { name: 'International Services', href: '/services/international' },*/
   ];
 
   const navLinks = [

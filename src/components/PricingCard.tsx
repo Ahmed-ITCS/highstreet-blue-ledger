@@ -12,7 +12,8 @@ const PricingCard = () => {
     "Annual accounts preparation",
     "Basic tax advice",
     "Email support",
-    "Quarterly business review"
+    "Quarterly business review",
+    "First 12 hours free consultation",
   ];
 
   return (

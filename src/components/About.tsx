@@ -101,7 +101,7 @@ const About = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { title: "ICAEW Member Firm", desc: "Chartered accountants committed to the highest professional standards" },
+                //{ title: "ICAEW Member Firm", desc: "Chartered accountants committed to the highest professional standards" },
                 { title: "Meet the Team", desc: "Experienced professionals dedicated to your financial success", link: "/team" },
                 { title: "Client-Centric Focus", desc: "Tailored solutions that address your specific business challenges" }
               ].map((item, index) => (

@@ -2,39 +2,60 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calculator, ChartBar, FileText, Shield, Search, Settings } from "lucide-react";
+import { Banknote, AlertTriangle } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      title: "Tax Advisory",
-      description: "Strategic tax planning and compliance to minimize your obligations while ensuring full regulatory adherence.",
+      title: "Book Keeping",
+      description: "Accurate and organized financial record-keeping to support informed business decisions and regulatory compliance.",
       icon: <Calculator className="h-10 w-10 text-accountax-500" />,
     },
     {
-      title: "Audit & Assurance",
-      description: "Independent auditing services providing reliable financial information and enhancing stakeholder confidence.",
+      title: "Self Assessment Tax",
+      description: "Expert guidance in filing self-assessment tax returns accurately and on time, ensuring compliance and minimizing liabilities.",
       icon: <Search className="h-10 w-10 text-accountax-500" />,
     },
     {
-      title: "Business Advisory",
-      description: "Expert guidance to optimize operations, improve profitability and facilitate sustainable growth strategies.",
+      title: "Capital Gains Tax",
+      description: "Specialized advice to help you manage and reduce capital gains tax liabilities through strategic planning and compliance.",
       icon: <ChartBar className="h-10 w-10 text-accountax-500" />,
     },
     {
-      title: "Corporate Finance",
-      description: "Comprehensive support for acquisitions, disposals, management buyouts and raising development capital.",
+      title: "Payroll",
+      description: "Reliable and efficient payroll services to ensure timely employee payments, compliance with regulations, and accurate reporting.",
       icon: <Shield className="h-10 w-10 text-accountax-500" />,
     },
     {
-      title: "Outsourcing",
-      description: "Efficient management of accounting, payroll and compliance functions to reduce overhead and increase focus.",
+      title: "Accounts Management",
+      description: "Professional handling of your accounts to ensure accuracy, consistency, and timely financial reporting for better decision-making.",
       icon: <Settings className="h-10 w-10 text-accountax-500" />,
     },
     {
-      title: "International Services",
-      description: "Specialized support for businesses with international operations, including cross-border tax planning.",
+      title: "Cloud Accounting",
+      description: "Modern accounting solutions using cloud-based platforms to provide real-time access, automation, and enhanced collaboration.",
       icon: <FileText className="h-10 w-10 text-accountax-500" />,
     },
+    {
+      title: "Corporation Tax",
+      description: "Comprehensive corporation tax services to ensure compliance, optimize tax efficiency, and support your business growth.",
+      icon: <Banknote className="h-10 w-10 text-accountax-500" />,
+    },
+    {
+      title: "HMRC Tax Investigations",
+      description: "Expert representation and support during HMRC tax investigations to protect your interests and ensure a smooth resolution.",
+      icon: <AlertTriangle className="h-10 w-10 text-accountax-500" />,
+    },
+    {
+      title: "VAT Returns",
+      description: "Expert representation and support during VAT returns to ensure compliance, optimize tax efficiency, and support your business growth.",
+      icon: <FileText className="h-10 w-10 text-accountax-500" />,
+    },
+    {
+      title: "Year End Accounts",
+      description: "Expert representation and support during Year End Accounts to ensure compliance, optimize tax efficiency, and support your business growth.",
+      icon: <FileText className="h-10 w-10 text-accountax-500" />,
+    }
   ];
 
   return (

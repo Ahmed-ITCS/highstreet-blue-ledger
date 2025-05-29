@@ -7,97 +7,175 @@ import { Button } from '@/components/ui/button';
 import { ChevronLeft } from 'lucide-react';
 
 const serviceData = {
-  'tax-advisory': {
-    title: "Tax Advisory",
-    description: "Strategic tax planning and compliance to minimize your obligations while ensuring full regulatory adherence.",
+  'book-keeping': {
+    id:"1",
+    title: "Book Keeping",
+    description: "Our bookkeeping services ensure accurate and systematic recording of all your financial transactions. This detailed financial record-keeping forms the foundation of your business accounting, enabling you to have real-time insights into your financial health. By maintaining organized books, you can track expenses, revenues, and profits clearly, making tax preparation straightforward and audits hassle-free. We tailor our bookkeeping solutions to meet the unique needs of your business, helping you stay compliant with statutory regulations while improving your financial management capabilities.",
     content: [
-      "Our tax advisory service provides comprehensive solutions to optimize your tax position while ensuring compliance with all regulatory requirements. We help businesses and individuals navigate complex tax legislation to identify planning opportunities and minimize tax liabilities.",
-      "Our team of experienced tax specialists stays up-to-date with the latest tax laws and regulations to provide you with proactive advice and strategies tailored to your specific situation.",
+      "We provide meticulous bookkeeping services to ensure that your financial records are always up to date and audit-ready.",
+      "From daily transaction logging to monthly reconciliations, our team ensures your accounts reflect your actual financial standing at all times."
     ],
     benefits: [
-      "Minimize tax liabilities through strategic planning",
-      "Ensure full compliance with all tax regulations",
-      "Receive timely advice on tax law changes",
-      "Get support during tax inquiries and investigations",
-      "Optimize business structures for tax efficiency"
+      "Maintain clean and accurate financial records",
+      "Improve cash flow management",
+      "Simplify tax filing and audits",
+      "Access timely financial insights",
+      "Ensure compliance with financial reporting standards"
     ]
   },
-  'audit-assurance': {
-    title: "Audit & Assurance",
-    description: "Independent auditing services providing reliable financial information and enhancing stakeholder confidence.",
+  'self-assessment-tax': {
+    title: "Self Assessment Tax",
+    description: "Our self-assessment tax service provides comprehensive support for individuals and business owners to fulfill their tax obligations accurately and punctually. Navigating the complexities of self-assessment tax returns can be daunting, but with our expert guidance, you can be assured of claiming all eligible allowances and reliefs, minimizing your tax liability while remaining fully compliant with HMRC regulations. We keep you updated with any changes in tax laws that may affect you and provide proactive advice to help you avoid penalties and optimize your tax position.",
     content: [
-      "Our audit and assurance services provide independent verification of financial statements and internal controls, giving stakeholders confidence in the reliability of financial information.",
-      "Whether you require a statutory audit, an internal audit, or other assurance services, our experienced team delivers thorough and efficient audit processes that add value beyond compliance."
+      "We help individuals and business owners manage their self-assessment tax obligations, minimizing stress and avoiding penalties.",
+      "Our specialists ensure that all allowable expenses and reliefs are claimed to reduce your tax burden while remaining compliant."
     ],
     benefits: [
-      "Enhance credibility with stakeholders and investors",
-      "Identify weaknesses in internal controls",
-      "Improve financial reporting processes",
-      "Meet regulatory requirements efficiently",
-      "Gain insights to enhance business performance"
+      "Avoid late filing penalties",
+      "Maximize tax efficiency with expert advice",
+      "Ensure accurate calculation of income and tax",
+      "Receive reminders and deadline support",
+      "Get professional representation in case of inquiries"
     ]
   },
-  'business-advisory': {
-    title: "Business Advisory",
-    description: "Expert guidance to optimize operations, improve profitability and facilitate sustainable growth strategies.",
+  'capital-gains-tax': {
+    title: "Capital Gains Tax",
+    description: "Managing capital gains tax effectively is critical when disposing of assets such as property, shares, or business interests. Our capital gains tax advisory service provides expert assistance to help you understand your tax liabilities and identify strategies to reduce your tax burden. We analyze your transactions, consider reliefs and exemptions, and guide you on the optimal timing for asset disposals. With our support, you can plan ahead to minimize tax impact while ensuring full compliance with HMRC requirements, helping you retain more of your hard-earned gains.",
     content: [
-      "Our business advisory services provide strategic guidance to help businesses optimize operations, improve profitability, and achieve sustainable growth.",
-      "We work closely with business owners and management teams to understand their unique challenges and opportunities, developing tailored solutions that deliver measurable results."
+      "We assist individuals and businesses in understanding and planning for capital gains tax arising from asset sales, shares, or property.",
+      "Our team offers proactive strategies to defer, reduce, or eliminate capital gains tax legally and efficiently."
     ],
     benefits: [
-      "Develop effective growth strategies",
-      "Optimize business processes for efficiency",
-      "Improve financial performance and profitability",
-      "Enhance decision-making with data-driven insights",
-      "Navigate complex business challenges successfully"
+      "Reduce capital gains tax through effective planning",
+      "Understand exemptions and reliefs available",
+      "Ensure compliance with HMRC reporting requirements",
+      "Receive guidance on asset disposal timing",
+      "Get expert support for property and share sales"
     ]
   },
-  'corporate-finance': {
-    title: "Corporate Finance",
-    description: "Comprehensive support for acquisitions, disposals, management buyouts and raising development capital.",
+  'payroll': {
+    title: "Payroll",
+    description: "Our payroll services deliver reliable, timely, and fully compliant management of employee salaries, tax deductions, and benefits administration. We handle all aspects of payroll processing including payslip generation, PAYE calculations, National Insurance contributions, and pension scheme administration. By outsourcing your payroll to us, you reduce administrative overhead and risk of errors, freeing your time to focus on core business activities. We ensure your payroll processes comply with ever-evolving employment and tax regulations, helping you avoid costly penalties and maintain employee satisfaction.",
     content: [
-      "Our corporate finance services provide comprehensive support for businesses undergoing significant transactions, including mergers and acquisitions, disposals, management buyouts, and capital raising.",
-      "With our deep industry knowledge and transaction expertise, we guide clients through every stage of the process to maximize value and achieve strategic objectives."
+      "Our payroll services guarantee timely and compliant salary processing, tax deductions, and employee benefits administration.",
+      "We handle everything from payslips to HMRC submissions, letting you focus on running your business."
     ],
     benefits: [
-      "Access expert guidance throughout transaction processes",
-      "Maximize value in business sales or acquisitions",
-      "Secure optimal funding for growth and development",
-      "Benefit from thorough due diligence processes",
-      "Develop effective post-transaction integration strategies"
+      "Ensure accurate and on-time employee payments",
+      "Stay compliant with tax and employment laws",
+      "Simplify pension and benefits processing",
+      "Automate payroll calculations and deductions",
+      "Avoid penalties and reduce administrative burden"
     ]
   },
-  'outsourcing': {
-    title: "Outsourcing",
-    description: "Efficient management of accounting, payroll and compliance functions to reduce overhead and increase focus.",
+  'accounts-management': {
+    title: "Accounts Management",
+    description: "Our accounts management service provides thorough oversight and administration of your business’s financial records, ensuring accuracy, transparency, and timeliness. By maintaining proper ledgers, trial balances, and financial statements, we help you understand your company’s financial position clearly, supporting effective strategic planning and decision-making. We customize our approach to your business’s size and sector, ensuring compliance with all statutory requirements while providing detailed insights that aid profitability and sustainability.",
     content: [
-      "Our outsourcing services allow businesses to delegate accounting, payroll, and compliance functions to our expert team, reducing overhead costs and allowing you to focus on core business activities.",
-      "We provide scalable solutions tailored to your specific needs, from basic bookkeeping to full-service financial management, ensuring accuracy, timeliness, and compliance."
+      "Our accounts management service provides structured financial oversight to maintain healthy financial records and support long-term growth.",
+      "We manage your ledgers, trial balances, and financial statements to deliver actionable insights and financial clarity."
     ],
     benefits: [
-      "Reduce costs associated with in-house accounting functions",
-      "Access specialized expertise without hiring additional staff",
-      "Improve accuracy and timeliness of financial reporting",
-      "Scale services up or down based on business needs",
-      "Free up internal resources to focus on core activities"
+      "Improve decision-making with accurate reports",
+      "Ensure consistency in financial record-keeping",
+      "Identify areas of overspending or inefficiencies",
+      "Meet compliance and audit requirements",
+      "Gain insights into profitability and cash flow"
     ]
   },
-  'international': {
-    title: "International Services",
-    description: "Specialized support for businesses with international operations, including cross-border tax planning.",
+  'cloud-accounting': {
+    title: "Cloud Accounting",
+    description: "Leverage the power of cloud accounting to transform how your business manages finances. Our cloud accounting services provide you with real-time access to your financial data securely from any location, at any time, using any device. Automation features simplify invoicing, expense tracking, bank reconciliations, and reporting, reducing manual effort and human error. This modern approach facilitates better collaboration between your finance team and advisors, ensuring decisions are always based on current and accurate information.",
     content: [
-      "Our international services provide specialized support for businesses operating across borders, helping navigate the complexities of international tax, compliance, and financial reporting.",
-      "With our global network of professionals, we deliver integrated solutions that address the unique challenges of multinational operations while identifying opportunities for optimization."
+      "We offer cloud accounting solutions that allow you to access your financial data securely from anywhere, on any device.",
+      "Our systems automate invoicing, expense tracking, bank reconciliation, and reporting to save time and reduce errors."
     ],
     benefits: [
-      "Navigate complex international tax regulations",
-      "Optimize global corporate structures",
-      "Manage transfer pricing compliance and documentation",
-      "Coordinate multi-jurisdiction financial reporting",
-      "Support international expansion strategies"
+      "Access financial data anytime, anywhere",
+      "Automate recurring tasks like invoicing and reconciliation",
+      "Enhance collaboration with your finance team",
+      "Ensure secure data storage and backups",
+      "Streamline financial reporting and compliance"
+    ]
+  },
+  'cashflow-planning': {
+    title: "Cashflow Planning",
+    description: "Effective cashflow planning is vital to maintaining your business’s financial health and avoiding liquidity crises. We provide detailed cashflow forecasting and management services that help you anticipate cash shortages, optimize working capital, and plan for upcoming expenses or investments. By monitoring your cash inflows and outflows closely, we enable you to make informed decisions that keep your operations running smoothly and support sustainable growth.",
+    content: [
+      "Our cashflow planning services help you forecast incoming and outgoing funds, enabling you to make informed financial decisions.",
+      "We work closely with you to identify potential shortfalls and create actionable plans to optimize your cash position."
+    ],
+    benefits: [
+      "Maintain healthy cash reserves",
+      "Avoid unexpected cash shortages",
+      "Plan for investments and growth",
+      "Improve budgeting accuracy",
+      "Enhance financial confidence and control"
+    ]
+  },
+  'corporation-tax': {
+    title: "Corporation Tax",
+    description: "Our corporation tax service assists businesses in navigating the complexities of corporation tax regulations to ensure full compliance while optimizing tax liabilities. We prepare accurate corporation tax returns, identify all available reliefs and allowances, and develop strategies to reduce your tax burden legally. Our experts keep abreast of the latest changes in tax legislation and provide tailored advice that supports your business’s financial goals and growth plans.",
+    content: [
+      "We assist businesses in calculating and filing corporation tax returns accurately and on time.",
+      "Our experts provide strategies to minimize liabilities and leverage tax reliefs to your advantage."
+    ],
+    benefits: [
+      "Ensure full compliance with corporation tax laws",
+      "Optimize tax position through effective planning",
+      "Reduce risk of penalties and audits",
+      "Claim all eligible reliefs and allowances",
+      "Get expert advice tailored to your business needs"
+    ]
+  },
+  'hmrc-tax-investigations': {
+    title: "HMRC Tax Investigations",
+    description: "Facing an HMRC tax investigation can be stressful and complex. Our dedicated team provides expert representation and guidance throughout the investigation process, working directly with HMRC to resolve any queries efficiently. We protect your interests by ensuring accurate, timely, and comprehensive responses, minimizing disruption to your business operations. With our experience and support, you can navigate investigations confidently and reduce the risk of penalties or fines.",
+    content: [
+      "If you are subject to an HMRC tax investigation, our experienced team will guide you through the process and liaise directly with HMRC on your behalf.",
+      "We work to resolve issues efficiently while minimizing disruption to your business."
+    ],
+    benefits: [
+      "Professional support during stressful investigations",
+      "Reduce the risk of penalties and fines",
+      "Ensure accurate and timely responses to HMRC",
+      "Protect your business reputation",
+      "Navigate complex tax queries with expert help"
+    ]
+  },
+  'vat-returns': {
+    title: "VAT Returns",
+    description: "We provide expert preparation and submission of VAT returns to ensure your business complies with VAT legislation accurately and on time. Our service includes detailed record-keeping, calculation of VAT due, and identification of reclaimable VAT to optimize your cash flow. Staying up to date with VAT regulations and filing correctly prevents costly penalties and ensures smooth operations for your business.",
+    content: [
+      "We manage the entire VAT return process, including calculations, record-keeping, and submission to HMRC.",
+      "Our team ensures you claim the correct VAT and remain compliant with VAT legislation."
+    ],
+    benefits: [
+      "Avoid late filing and payment penalties",
+      "Maximize VAT recovery where possible",
+      "Simplify the VAT return process",
+      "Stay updated with changes in VAT rules",
+      "Reduce the administrative burden on your business"
+    ]
+  },
+  'year-end-accounts': {
+    title: "Year End Accounts",
+    description: "Our year-end accounts preparation service ensures your annual financial statements are compiled accurately and in accordance with statutory requirements. We prepare balance sheets, profit and loss accounts, and supporting notes that provide a comprehensive overview of your business’s financial position and performance. These accounts support transparency, satisfy audit and regulatory demands, and form the basis for tax filings and strategic planning.",
+    content: [
+      "We compile accurate year-end accounts that comply with accounting standards and statutory requirements.",
+      "Our service provides clear insights into your business’s financial health for shareholders, auditors, and regulators."
+    ],
+    benefits: [
+      "Meet statutory reporting deadlines",
+      "Ensure accuracy and completeness of accounts",
+      "Provide clarity on financial performance",
+      "Support audit and tax compliance",
+      "Inform business planning and strategy"
     ]
   }
 };
+
+
 
 const ServiceDetail = () => {
   const { serviceId } = useParams();
