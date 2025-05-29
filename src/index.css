@@ -156,7 +156,7 @@
   @keyframes slide-in-left {
     0% {
       opacity: 0;
-      transform: translateX(-150px);
+      transform: translateX(-300);
     }
     100% {
       opacity: 1;
@@ -167,7 +167,7 @@
   @keyframes slide-in-right {
     0% {
       opacity: 0;
-      transform: translateX(150px);
+      transform: translateX(300px);
     }
     100% {
       opacity: 1;
