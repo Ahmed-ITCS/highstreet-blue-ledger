@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calculator, ChartBar, FileText, Shield, Search, Settings } from "lucide-react";
-import { Banknote, AlertTriangle } from "lucide-react";
+import { Banknote, AlertTriangle,UserCog,Users } from "lucide-react";
 import AnimatedElement from './AnimatedElement';
 
 const Services = () => {
@@ -56,7 +56,18 @@ const Services = () => {
       title: "Year End Accounts",
       description: "Expert representation and support during Year End Accounts to ensure compliance, optimize tax efficiency, and support your business growth.",
       icon: <FileText className="h-10 w-10 text-accountax-500" />,
+    },
+    {
+      title: "Contractor Accounting",
+      description: "Specialized accounting and tax solutions tailored for contractors, freelancers, and consultants—ensuring IR35 compliance, optimized take-home pay, and stress-free financial management.",
+      icon: <UserCog className="h-10 w-10 text-accountax-500" />,
+    },
+    {
+      title: "Limited Liability Partnerships",
+      description: "Comprehensive accounting and compliance services tailored for Limited Liability Partnerships (LLPs), ensuring accurate profit-sharing, partner tax returns, and full adherence to HMRC and Companies House regulations.",
+      icon: <Users className="h-10 w-10 text-accountax-500" />,
     }
+    
   ];
 
   return (

@@ -38,6 +38,8 @@ const Navbar = () => {
     { name: 'HMRC Tax Investigations', href: '/services/hmrc-tax-investigations' },
     { name: 'Vat Returns', href: '/services/vat-returns' },
     { name: 'Year End Accounts', href: '/services/year-end-accounts' },
+    { name: 'Contractor Accountings', href: '/services/contractor-accounting' },
+    { name: 'Limited-Liability-Partnerships', href: '/services/limited-liability-partnerships' },
 
     /*
     { name: 'Tax Advisory', href: '/services/tax-advisory' },

@@ -8,7 +8,6 @@ import { ChevronLeft } from 'lucide-react';
 
 const serviceData = {
   'book-keeping': {
-    id:"1",
     title: "Book Keeping",
     description: "Our bookkeeping services ensure accurate and systematic recording of all your financial transactions. This detailed financial record-keeping forms the foundation of your business accounting, enabling you to have real-time insights into your financial health. By maintaining organized books, you can track expenses, revenues, and profits clearly, making tax preparation straightforward and audits hassle-free. We tailor our bookkeeping solutions to meet the unique needs of your business, helping you stay compliant with statutory regulations while improving your financial management capabilities.",
     content: [
@@ -172,7 +171,38 @@ const serviceData = {
       "Support audit and tax compliance",
       "Inform business planning and strategy"
     ]
-  }
+  },
+  'contractor-accounting': {
+  title: "Contractor Accounting",
+  description: "Our contractor accounting services are specifically tailored for freelancers, consultants, and self-employed professionals. We help you navigate the complexities of tax laws, ensure IR35 compliance, and optimize your income structure for maximum take-home pay. With expert support in bookkeeping, payroll, and tax filings, we handle the financial details so you can focus on delivering value to your clients. Whether you're working through a limited company or as a sole trader, our solutions are designed to keep you compliant, efficient, and financially informed.",
+  content: [
+    "We provide end-to-end accounting services for contractors, including company formation, expense tracking, payroll management, and quarterly tax reviews.",
+    "Our expert advisors stay on top of HMRC regulations and ensure you're making the most of available allowances and deductions."
+  ],
+  benefits: [
+    "IR35 guidance and compliance support",
+    "Maximize take-home pay with optimized tax structure",
+    "Dedicated support for self-employed professionals",
+    "Automated payroll and expense processing",
+    "Stress-free tax filing and financial planning"
+  ]
+},
+'limited-liability-partnerships': {
+  title: "Limited Liability Partnerships",
+  description: "Our LLP accounting services provide specialized financial and compliance support tailored for Limited Liability Partnerships. We assist partners in understanding their individual responsibilities, managing shared profits, and maintaining accurate financial records. From partnership agreements to annual filings and tax obligations, our team ensures your LLP operates smoothly, remains compliant with HMRC regulations, and is structured for financial efficiency and transparency.",
+  content: [
+    "We handle all accounting and compliance needs for LLPs, including the preparation of annual accounts, tax returns for each member, and support with partnership agreements.",
+    "Our experts offer tailored advice to help you distribute profits fairly, track individual contributions, and reduce overall tax exposure."
+  ],
+  benefits: [
+    "Ensure full compliance with LLP regulations",
+    "Accurate profit-sharing calculations and documentation",
+    "Transparent financial reporting for all partners",
+    "Support with HMRC filings and partnership tax returns",
+    "Tailored advice for managing liabilities and capital contributions"
+  ]
+},
+
 };
 
 
