@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { Link } from 'react-router-dom';
+import AnimatedElement from './AnimatedElement';
 
 const About = () => {
   const stats = [
@@ -31,40 +32,44 @@ const About = () => {
             <div className="space-y-10">
               <div className="grid grid-cols-2 gap-8">
                 {stats.map((stat, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 group border border-accountax-100/20 hover:border-accountax-200 animate-slide-in-bottom"
-                    style={{ animationDelay: `${0.1 * index}s` }}
+                  <AnimatedElement
+                    key={index}
+                    type={index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}
+                    delay={0.2 + (index * 0.3)}
                   >
-                    <div className="text-3xl font-serif font-bold text-accountax-500 mb-2 group-hover:scale-110 transition-transform origin-left">{stat.value}</div>
-                    <div className="text-accountax-700 font-medium text-sm">{stat.label}</div>
-                  </div>
+                    <div className="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 group border border-accountax-100/20 hover:border-accountax-200">
+                      <div className="text-3xl font-serif font-bold text-accountax-500 mb-2 group-hover:scale-110 transition-transform origin-left">{stat.value}</div>
+                      <div className="text-accountax-700 font-medium text-sm">{stat.label}</div>
+                    </div>
+                  </AnimatedElement>
                 ))}
               </div>
               
-              <div className="bg-white p-8 rounded-xl shadow-xl border-l-4 border-accountax-500 relative overflow-hidden animate-slide-in-bottom" style={{ animationDelay: '0.4s' }}>
-                <div className="absolute top-0 right-0 w-24 h-24 bg-accountax-50 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-accountax-50 rounded-full"></div>
-              
-                <Quote className="text-4xl font-serif text-accountax-300/40 mb-4">"</Quote>
-                <p className="relative z-10 italic text-accountax-700">
-                  "As a leading UK accounting firm, we combine technical excellence with a deep understanding of your business to deliver exceptional results."
-                </p>
-                <div className="mt-6 flex items-center relative z-10">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accountax-400 to-accountax-600 flex items-center justify-center mr-3 shadow-md">
-                    <span className="font-serif font-bold text-white">JD</span>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-accountax-900">John Davies</h4>
-                    <p className="text-sm text-accountax-600">Managing Partner</p>
+              <AnimatedElement type="slide-in-left" delay={1.4}>
+                <div className="bg-white p-8 rounded-xl shadow-xl border-l-4 border-accountax-500 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-accountax-50 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                  <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-accountax-50 rounded-full"></div>
+                
+                  <Quote className="text-4xl font-serif text-accountax-300/40 mb-4">"</Quote>
+                  <p className="relative z-10 italic text-accountax-700">
+                    "As a leading UK accounting firm, we combine technical excellence with a deep understanding of your business to deliver exceptional results."
+                  </p>
+                  <div className="mt-6 flex items-center relative z-10">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accountax-400 to-accountax-600 flex items-center justify-center mr-3 shadow-md">
+                      <span className="font-serif font-bold text-white">JD</span>
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-accountax-900">John Davies</h4>
+                      <p className="text-sm text-accountax-600">Managing Partner</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </AnimatedElement>
             </div>
           </div>
           
           <div className="lg:col-span-3 order-1 lg:order-2">
-            <div className="mb-16 animate-fade-in-up">
+            <AnimatedElement type="slide-in-right" delay={0.3} className="mb-16">
               <div className="inline-block mb-2">
                 <div className="h-1 w-10 bg-accountax-500 mb-1"></div>
                 <div className="h-1 w-16 bg-accountax-400"></div>
@@ -97,31 +102,33 @@ const About = () => {
                   Our Approach
                 </Button>
               </div>
-            </div>
+            </AnimatedElement>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                //{ title: "ICAEW Member Firm", desc: "Chartered accountants committed to the highest professional standards" },
                 { title: "Meet the Team", desc: "Experienced professionals dedicated to your financial success", link: "/team" },
                 { title: "Client-Centric Focus", desc: "Tailored solutions that address your specific business challenges" }
               ].map((item, index) => (
-                <Link key={index} to={item.link || "#"} className="block">
-                  <div 
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-accountax-100/20 hover:border-accountax-300/30 relative overflow-hidden group animate-slide-in-bottom h-full"
-                    style={{ animationDelay: `${0.5 + (0.1 * index)}s` }}
-                  >
-                    <div className="absolute top-0 left-0 h-full w-1 bg-accountax-500/30 group-hover:bg-accountax-500 transition-colors duration-300"></div>
-                    <div className="pl-3">
-                      <div className="flex items-center mb-3">
-                        <div className="mr-2 text-accountax-500">
-                          <Check size={18} />
+                <AnimatedElement
+                  key={index}
+                  type={index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}
+                  delay={1.6 + (index * 0.3)}
+                >
+                  <Link to={item.link || "#"} className="block">
+                    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-accountax-100/20 hover:border-accountax-300/30 relative overflow-hidden group h-full">
+                      <div className="absolute top-0 left-0 h-full w-1 bg-accountax-500/30 group-hover:bg-accountax-500 transition-colors duration-300"></div>
+                      <div className="pl-3">
+                        <div className="flex items-center mb-3">
+                          <div className="mr-2 text-accountax-500">
+                            <Check size={18} />
+                          </div>
+                          <h3 className="font-serif text-lg font-semibold text-accountax-800 group-hover:text-accountax-600 transition-colors">{item.title}</h3>
                         </div>
-                        <h3 className="font-serif text-lg font-semibold text-accountax-800 group-hover:text-accountax-600 transition-colors">{item.title}</h3>
+                        <p className="text-accountax-600 text-sm pl-7">{item.desc}</p>
                       </div>
-                      <p className="text-accountax-600 text-sm pl-7">{item.desc}</p>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </AnimatedElement>
               ))}
             </div>
           </div>

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
+import AnimatedElement from './AnimatedElement';
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -54,7 +55,7 @@ const Testimonials = () => {
       <div className="absolute top-0 left-0 w-full h-40 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23008783%22%20fill-opacity%3D%220.05%22%3E%3C%2Frect%3E%3C%2Fsvg%3E')] opacity-70"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center mb-16 animate-slide-in-bottom" style={{ animationDelay: '0.2s' }}>
+        <AnimatedElement type="slide-in-left" delay={0.2} className="text-center mb-16">
           <div className="inline-block mb-2">
             <div className="h-1 w-10 bg-accountax-500 mb-1 rounded-full"></div>
             <div className="h-1 w-16 bg-accountax-400 rounded-full"></div>
@@ -63,56 +64,62 @@ const Testimonials = () => {
           <p className="text-lg text-accountax-600 max-w-3xl mx-auto">
             Hear from businesses that have achieved financial clarity and growth through our partnership.
           </p>
-        </div>
+        </AnimatedElement>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index} 
-              className={`bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group animate-slide-in-bottom ${index === activeIndex ? 'ring-2 ring-accountax-500/50' : ''}`}
-              style={{ animationDelay: `${0.3 + 0.2 * index}s` }}
-              onClick={() => setActiveIndex(index)}
+            <AnimatedElement
+              key={index}
+              type={index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}
+              delay={0.4 + (index * 0.3)}
             >
-              <CardContent className="p-8 relative">
-                <div className="absolute top-0 right-0 w-40 h-40 bg-accountax-50 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-accountax-100/50 transition-colors duration-500"></div>
-                
-                <div className="flex justify-between items-start mb-6 relative z-10">
-                  <div className="bg-accountax-50 text-accountax-600 text-xs font-medium py-2 px-4 rounded-full shadow-sm animate-slide-in-right" style={{ animationDelay: `${0.4 + 0.2 * index}s` }}>
-                    {testimonial.company}
+              <Card 
+                className={`bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group ${index === activeIndex ? 'ring-2 ring-accountax-500/50' : ''}`}
+                onClick={() => setActiveIndex(index)}
+              >
+                <CardContent className="p-8 relative">
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-accountax-50 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-accountax-100/50 transition-colors duration-500"></div>
+                  
+                  <div className="flex justify-between items-start mb-6 relative z-10">
+                    <div className="bg-accountax-50 text-accountax-600 text-xs font-medium py-2 px-4 rounded-full shadow-sm">
+                      {testimonial.company}
+                    </div>
+                    <Quote size={32} className="text-accountax-200 group-hover:text-accountax-300 transition-colors" />
                   </div>
-                  <Quote size={32} className="text-accountax-200 group-hover:text-accountax-300 transition-colors animate-fade-in" style={{ animationDelay: `${0.5 + 0.2 * index}s` }} />
-                </div>
-                
-                <blockquote className="text-accountax-700 mb-8 italic leading-relaxed relative z-10 animate-slide-in-right" style={{ animationDelay: `${0.6 + 0.2 * index}s` }}>"{testimonial.quote}"</blockquote>
-                
-                <div className="flex items-center pt-6 border-t border-accountax-100 relative z-10 animate-slide-in-bottom" style={{ animationDelay: `${0.7 + 0.2 * index}s` }}>
-                  <div className="w-14 h-14 rounded-full overflow-hidden mr-4 border-2 border-accountax-100 shadow-md">
-                    <img src={testimonial.image} alt={testimonial.author} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                  
+                  <blockquote className="text-accountax-700 mb-8 italic leading-relaxed relative z-10">"{testimonial.quote}"</blockquote>
+                  
+                  <div className="flex items-center pt-6 border-t border-accountax-100 relative z-10">
+                    <div className="w-14 h-14 rounded-full overflow-hidden mr-4 border-2 border-accountax-100 shadow-md">
+                      <img src={testimonial.image} alt={testimonial.author} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-accountax-900">{testimonial.author}</p>
+                      <p className="text-sm text-accountax-600">{testimonial.position}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-medium text-accountax-900">{testimonial.author}</p>
-                    <p className="text-sm text-accountax-600">{testimonial.position}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </AnimatedElement>
           ))}
         </div>
         
         <div className="mt-20 text-center">
           <div className="flex flex-wrap justify-center items-center gap-10 mt-10">
             {clientLogos.map((client, i) => (
-              <div 
-                key={i} 
-                className="h-28 w-auto flex items-center justify-center bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all backdrop-blur-md animate-slide-in-bottom hover:-translate-y-1"
-                style={{ animationDelay: `${0.8 + 0.1 * i}s` }}
+              <AnimatedElement
+                key={i}
+                type={i % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}
+                delay={1.3 + (i * 0.2)}
               >
-                <img 
-                  src={client.image} 
-                  alt={client.name} 
-                  className="max-h-20 w-auto object-contain" 
-                />
-              </div>
+                <div className="h-28 w-auto flex items-center justify-center bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all backdrop-blur-md hover:-translate-y-1">
+                  <img 
+                    src={client.image} 
+                    alt={client.name} 
+                    className="max-h-20 w-auto object-contain" 
+                  />
+                </div>
+              </AnimatedElement>
             ))}
           </div>
         </div>

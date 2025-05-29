@@ -3,6 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calculator, ChartBar, FileText, Shield, Search, Settings } from "lucide-react";
 import { Banknote, AlertTriangle } from "lucide-react";
+import AnimatedElement from './AnimatedElement';
 
 const Services = () => {
   const services = [
@@ -68,7 +69,7 @@ const Services = () => {
       <div className="absolute inset-0 pattern-bg opacity-5"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative">
-        <div className="text-center mb-16 animate-fade-in-up">
+        <AnimatedElement type="slide-in-left" delay={0.2} className="text-center mb-16">
           <div className="inline-block mb-2">
             <div className="h-1 w-10 bg-accountax-500 mb-1"></div>
             <div className="h-1 w-16 bg-accountax-400"></div>
@@ -79,31 +80,33 @@ const Services = () => {
           <p className="text-lg text-accountax-600 max-w-3xl mx-auto">
             Comprehensive expertise tailored to the unique financial needs and objectives of your business.
           </p>
-        </div>
+        </AnimatedElement>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card 
-              key={index} 
-              className="card-elegant group animate-slide-in-bottom"
-              style={{ animationDelay: `${0.15 * index}s` }}
+            <AnimatedElement 
+              key={index}
+              type={index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}
+              delay={0.4 + (index * 0.2)}
             >
-              <CardHeader className="relative z-10 pb-2">
-                <div className="mb-4 p-4 bg-accountax-50 inline-flex rounded-2xl group-hover:bg-accountax-100 transition-colors duration-300 shadow-md">
-                  {service.icon}
-                </div>
-                <CardTitle className="text-xl font-serif font-semibold text-accountax-800 group-hover:text-accountax-600 transition-colors">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="relative z-10">
-                <CardDescription className="text-accountax-600">{service.description}</CardDescription>
-                <div className="mt-6 flex items-center text-accountax-500 font-medium text-sm group-hover:text-accountax-700 transition-colors">
-                  <span>Learn more</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </CardContent>
-            </Card>
+              <Card className="card-elegant group h-full">
+                <CardHeader className="relative z-10 pb-2">
+                  <div className="mb-4 p-4 bg-accountax-50 inline-flex rounded-2xl group-hover:bg-accountax-100 transition-colors duration-300 shadow-md">
+                    {service.icon}
+                  </div>
+                  <CardTitle className="text-xl font-serif font-semibold text-accountax-800 group-hover:text-accountax-600 transition-colors">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="relative z-10">
+                  <CardDescription className="text-accountax-600">{service.description}</CardDescription>
+                  <div className="mt-6 flex items-center text-accountax-500 font-medium text-sm group-hover:text-accountax-700 transition-colors">
+                    <span>Learn more</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedElement>
           ))}
         </div>
       </div>
