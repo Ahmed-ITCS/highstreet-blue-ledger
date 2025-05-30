@@ -6,9 +6,9 @@ import Footer from '@/components/Footer';
 const Team = () => {
   const team = [
     {
-      name: "John Davies",
-      role: "Managing Partner",
-      bio: "John has over 20 years of experience in accounting and financial management, specializing in strategic tax planning for high-growth businesses.",
+      name: "A D Rehman",
+      role: "AccA member and Masters in investment management ",
+      bio: "He has been working with one of the big four firms, EY and UK based taxation firm in the past. More than 6 years of an experience in managing buisness and build strong relationships with the clients. Explore new buisness opportunities in a competitive environment. Strong knowledge to deal with taxation matters.",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
     },
     {
