@@ -27,11 +27,11 @@ const Team = () => {
       name: "Abdul Muqeet",
       role: "Partner",
       bio: [
-        'Member of the Association of Chartered Certified Accountants (ACCA)',
-
-        'Held senior positions at PwC (Big Four) and British American Tobacco Ltd',
-        
-        'Extensive experience in auditing, business modeling, and resolving complex financial issues'
+        "Fellow member of ICAEW and ACCA",
+        "12+ years of international experience with PwC and EY",
+        "Led accounting, advisory, and audit engagements across diverse industries",
+        "Worked with listed and unlisted companies with revenues between $50M and $10B",
+        "Provided advisory services to both local and international outsourcing firms"
       ],
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
     },
@@ -39,14 +39,52 @@ const Team = () => {
       name: "Naeem Azam",
       role: "Director Business Development",
       bio: [
-       'Held key management positions in multinational corporations based in the UK',
-
-        'Possesses comprehensive knowledge of business operations across diverse industries',
-
-        'Currently serves as the Director of Business Development'
+        "Managed diverse client portfolios in UK accountancy practices",
+        "Led Business Services Departments providing management accounts and VAT advisory",
+        "Expert in statutory and compliance matters",
+        "Previously served as a Senior Consultant at a leading UK accountancy firm",
+        "Currently serves as the Director of Business Development"
       ],
       image: "https://ui-avatars.com/api/?name=NA&background=0D8ABC&color=fff"
-    },  
+    },
+    {
+      name: "Zohaib",
+      role: "Team member",
+      bio: [
+        "Fellow member of ICAEW and ACCA",
+        "12+ years of international experience with PwC and KPMG",
+        "Led accounting, advisory, and audit engagements across diverse industries",
+        "Worked with listed and unlisted companies with revenues between $50M and $10B",
+        "Provided advisory services to both local and international outsourcing firms"
+      ],
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb"
+    },
+    {
+      name: "Salman Gillani",
+      role: "Team member",
+      bio: [
+        "Member of ACCA with over 15 years of experience in Accounting and Finance",
+        "Worked internationally in Dubai, Pakistan, and the UK",
+        "Managed audits at Big Four firms",
+        "Served as Financial Controller in a multinational manufacturing company",
+        "Developed strong relationships with business owners",
+        "Currently leads business development at Fin-eX"
+      ],
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+    },
+    {
+      name: "Ahmed Malik",
+      role: "Team member",
+      bio: [
+        "Fellow Chartered Accountant",
+        "Managed diverse client portfolios in UK accountancy practices",
+        "Led Business Services Departments providing management accounts and VAT advisory",
+        "Expert in statutory and compliance matters",
+        "Previously served as a Senior Consultant at a leading UK accountancy firm",
+        "Currently oversees operations at Fin-eX Consultants"
+      ],
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2"
+    }  
   ];
 
   return (
