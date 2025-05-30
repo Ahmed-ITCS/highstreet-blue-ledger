@@ -7,40 +7,75 @@ const Team = () => {
   const team = [
     {
       name: "A D Rehman",
-      role: "AccA member and Masters in investment management ",
-      bio: "He has been working with one of the big four firms, EY and UK based taxation firm in the past. More than 6 years of an experience in managing buisness and build strong relationships with the clients. Explore new buisness opportunities in a competitive environment. Strong knowledge to deal with taxation matters.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+      role: "Partner",
+      bio: [
+        "ACCA member",
+        "Masters in Investment Management",
+        "Worked with EY (Big Four) and a UK-based taxation firm",
+        "6+ years of experience managing businesses and building strong client relationships",
+        "Explores new business opportunities in competitive environments",
+        "Strong knowledge of taxation matters"
+      ],
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
     },
     {
-      name: "Sarah Johnson",
-      role: "Tax Director",
-      bio: "Sarah specializes in corporate taxation and has helped clients save millions through her innovative tax planning strategies.",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+      name: "Abdul Muqeet",
+      role: "Partner",
+      bio: [
+        "Member of ACCA",
+        "Worked with PwC and British American Tobacco Ltd in senior roles",
+        "Strong experience in auditing, business modelling, and handling complex issues"
+      ],
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
     },
     {
-      name: "Michael Chen",
-      role: "Audit Partner",
-      bio: "Michael leads our audit practice with a focus on ensuring compliance and identifying financial optimization opportunities.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+      name: "Naeem Azam",
+      role: "Director Business Development",
+      bio: [
+        "Held management roles in multinational corporations in the UK",
+        "Extensive knowledge of business operations across various industries",
+        "Currently serving as Director of Business Development"
+      ],
+      image: "https://ui-avatars.com/api/?name=NA&background=0D8ABC&color=fff"
     },
     {
-      name: "Emma Thompson",
-      role: "Corporate Finance Manager",
-      bio: "Emma has extensive experience in M&A transactions, due diligence, and raising capital for businesses across various sectors.",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+      name: "Zohaib",
+      role: "Team member",
+      bio: [
+        "Fellow member of ICAEW and ACCA",
+        "12+ years of international experience with PwC and KPMG",
+        "Led accounting, advisory, and audit engagements across diverse industries",
+        "Worked with listed and unlisted companies with revenues between $50M and $10B",
+        "Provided advisory services to both local and international outsourcing firms"
+      ],
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb"
     },
     {
-      name: "David Wilson",
-      role: "Business Advisory Lead",
-      bio: "David helps businesses optimize their operations and implement strategic growth initiatives through data-driven insights.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+      name: "Salman Gillani",
+      role: "Team member",
+      bio: [
+        "Member of ACCA with over 15 years of experience in Accounting and Finance",
+        "Worked internationally in Dubai, Pakistan, and the UK",
+        "Managed audits at Big Four firms",
+        "Served as Financial Controller in a multinational manufacturing company",
+        "Developed strong relationships with business owners",
+        "Currently leads business development at Fin-eX"
+      ],
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
     },
     {
-      name: "Olivia Martinez",
-      role: "International Tax Specialist",
-      bio: "Olivia specializes in cross-border tax planning and compliance for multinational corporations and high-net-worth individuals.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
-    },
+      name: "Ahmed Malik",
+      role: "Team member",
+      bio: [
+        "Fellow Chartered Accountant",
+        "Managed diverse client portfolios in UK accountancy practices",
+        "Led Business Services Departments providing management accounts and VAT advisory",
+        "Expert in statutory and compliance matters",
+        "Previously served as a Senior Consultant at a leading UK accountancy firm",
+        "Currently oversees operations at Fin-eX Consultants"
+      ],
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2"
+    }  
   ];
 
   return (
@@ -81,7 +116,11 @@ const Team = () => {
                     <div className="absolute top-0 left-6 w-12 h-1 bg-accountax-500 -translate-y-1/2"></div>
                     <h3 className="text-xl font-serif font-semibold text-accountax-800 mb-1">{member.name}</h3>
                     <p className="text-accountax-500 font-medium text-sm mb-4">{member.role}</p>
-                    <p className="text-accountax-600">{member.bio}</p>
+                    <ul className="text-accountax-600 list-disc list-inside space-y-1">
+  {member.bio.map((point, i) => (
+    <li key={i}>{point}</li>
+  ))}
+</ul>
                   </div>
                 </div>
               ))}
