@@ -79,6 +79,22 @@ const Services = () => {
       <div className="absolute -left-64 bottom-1/4 w-96 h-96 bg-accountax-200 rounded-full opacity-20 blur-3xl"></div>
       <div className="absolute inset-0 pattern-bg opacity-5"></div>
 
+      {/* Accounting imagery background */}
+      <div className="absolute top-20 right-10 opacity-10">
+        <img 
+          src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+          alt="Calculator" 
+          className="w-32 h-32 object-cover rounded-lg rotate-12"
+        />
+      </div>
+      <div className="absolute bottom-20 left-10 opacity-10">
+        <img 
+          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+          alt="Financial Charts" 
+          className="w-40 h-28 object-cover rounded-lg -rotate-6"
+        />
+      </div>
+
       <div className="container mx-auto px-4 md:px-6 relative">
         <AnimatedElement type="slide-in-left" delay={0.5} className="text-center mb-16">
           <div className="inline-block mb-2">
@@ -120,6 +136,58 @@ const Services = () => {
             </AnimatedElement>
           ))}
         </div>
+
+        {/* New Accounting Tools Section */}
+        <AnimatedElement type="slide-in-bottom" delay={6.0} className="mt-20">
+          <div className="bg-gradient-to-r from-accountax-50 to-accountax-100/50 rounded-2xl p-8 md:p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl md:text-3xl font-serif font-semibold text-accountax-900 mb-4">
+                  Modern Accounting <span className="gradient-text bg-gradient-to-r from-accountax-700 to-accountax-500">Tools & Technology</span>
+                </h3>
+                <p className="text-accountax-700 mb-6">
+                  We leverage cutting-edge technology and traditional accounting expertise to deliver precise, efficient, and reliable financial services for your business success.
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center text-accountax-600">
+                    <Calculator className="w-5 h-5 mr-2" />
+                    <span>Precise Calculations</span>
+                  </div>
+                  <div className="flex items-center text-accountax-600">
+                    <ChartBar className="w-5 h-5 mr-2" />
+                    <span>Financial Analysis</span>
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <img 
+                    src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                    alt="Professional Calculator" 
+                    className="w-full h-32 object-cover rounded-lg shadow-lg"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                    alt="Financial Software" 
+                    className="w-full h-20 object-cover rounded-lg shadow-lg"
+                  />
+                </div>
+                <div className="space-y-4 pt-8">
+                  <img 
+                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                    alt="Financial Analysis" 
+                    className="w-full h-20 object-cover rounded-lg shadow-lg"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                    alt="Data Analytics" 
+                    className="w-full h-32 object-cover rounded-lg shadow-lg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimatedElement>
       </div>
     </section>
   );
