@@ -9,10 +9,7 @@ const Team = () => {
       name: "A D Rehman",
       role: "Partner",
       bio: [
-        "A D Rehman is the member of Association of Chartered Certified Accountants (ACCA).",
-        "He holds the Master’s degree in Investment Management from one of the best Universities in the UK.",
-        "He possesses more than 7 years of an experience in Accounting and Advisory business roles in different businesses.",
-        "Before setting up the HSA he has been served the big 4 EY (Ernst & Young) and various UK accounting practices"
+        "A D Rehman is the member of Association of Chartered Certified Accountants (ACCA). He holds the Master’s degree in Investment Management from one of the best Universities in the UK. He possesses more than 7 years of an experience in Accounting and Advisory business roles in different businesses. Before setting up the HSA he has been served the big 4 EY (Ernst & Young) and various UK accounting practices"
 
       ],
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
@@ -21,11 +18,7 @@ const Team = () => {
       name: "Abdul Muqeet",
       role: "Partner",
       bio: [
-        "Muqeet is the member of Association of Chartered Certified Accountants (ACCA).",
-        "He holds the title of youngest ACCA qualified at the age of 17.",
-        "He has an experience of more than 8 years in Auditing and business advisory roles with EY and PWC.",
-        "During his work with “big  4” he was involved in managing the several roles in diversified industries including advisory, accounting and auditing assignments.",
-        "Currently he is serving in one of the FTSE50 British American Tobacco p.l.c as well as establishing the HSA"
+        "Muqeet is the member of Association of Chartered Certified Accountants (ACCA).He holds the title of youngest ACCA qualified at the age of 17.He has an experience of more than 8 years in Auditing and business advisory roles with EY and PWC. During his work with “big  4” he was involved in managing the several roles in diversified industries including advisory, accounting and auditing assignments. Currently he is serving in one of the FTSE50 British American Tobacco p.l.c as well as establishing the HSA"
       ],
       image: "/lovable-uploads/muqeet.jpeg"
     },
@@ -33,11 +26,7 @@ const Team = () => {
       name: "Naeem Azam",
       role: "Director Business Development",
       bio: [
-        "Naeem Azam is a member of the business community in the UK.",
-        "He has over 18 years of experience in marketing and business development.",
-        "Throughout his career he has been performed different roles in multinational companies in UK.",
-        "During his career Naeem has built strong relationship with many businesses by his outstanding services.",
-        "Currently he is working as a Business Development Director at HSA"
+        "Naeem Azam is a member of the business community in the UK. He has over 18 years of experience in marketing and business development. Throughout his career he has been performed different roles in multinational companies in UK. During his career Naeem has built strong relationship with many businesses by his outstanding services. Currently he is working as a Business Development Director at HSA"
       ],
       image: "https://ui-avatars.com/api/?name=NA&background=0D8ABC&color=fff"
     },
