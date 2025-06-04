@@ -96,7 +96,7 @@ const Hero = () => {
                         </svg>
                       ))}
                     </div>
-                    <img src="/lovable-uploads/c61e23a0-1d76-4412-8400-554190f2dd5f.png" alt="Highstreet Accountax Logo" className="h-10 w-auto animate-fade-in" />
+                    <img src="/lovable-uploads/c61e23a0-1d76-4412-8400-554190f2dd5f.jpg" alt="Highstreet Accountax Logo" className="h-10 w-auto animate-fade-in" />
                   </div>
                   <p className="text-center text-sm text-accountax-100 mt-2">"The most responsive accountants we've worked with"</p>
                 </AnimatedElement>

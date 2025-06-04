@@ -90,7 +90,6 @@ const OfficePictures = () => {
 
         <AnimatedElement type="slide-in-bottom" delay={3.6} className="mt-12 text-center">
           <p className="text-accountax-700 text-lg font-medium">
-            Visit our offices in London, Manchester, Birmingham and Edinburgh
           </p>
         </AnimatedElement>
       </div>

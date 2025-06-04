@@ -65,7 +65,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center group">
               <div className="mr-3 w-8 h-8">
-                <img src="/lovable-uploads/c61e23a0-1d76-4412-8400-554190f2dd5f.png" alt="Logo" className="w-full h-full object-contain" />
+                <img src="/lovable-uploads/c61e23a0-1d76-4412-8400-554190f2dd5f.jpg" alt="Logo" className="w-full h-full object-contain" />
               </div>
               <span className={`text-2xl font-serif font-bold ${scrolled ? 'text-accountax-800' : 'text-white'} transition-colors duration-300 flex items-center`}>
                 <span className="relative z-10 animate-wiggle">High</span>
