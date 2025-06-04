@@ -24,10 +24,10 @@ const Index = () => {
         <Hero />
         <Services />
         <WhyChooseUs />
-        <About />
-        <OfficePictures />
         <Testimonials />
         <PricingCard />
+        <About />
+        <OfficePictures />
         <Contact />
       </main>
       <Footer />
