@@ -23,11 +23,11 @@ const Index = () => {
       <main>
         <Hero />
         <Services />
-        <About />
         <WhyChooseUs />
+        <About />
         <OfficePictures />
-        <PricingCard />
         <Testimonials />
+        <PricingCard />
         <Contact />
       </main>
       <Footer />
