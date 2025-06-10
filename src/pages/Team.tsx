@@ -12,7 +12,7 @@ const Team = () => {
         "A D Rehman is the member of Association of Chartered Certified Accountants (ACCA). He holds the Master’s degree in Investment Management from one of the best Universities in the UK. He possesses more than 7 years of an experience in Accounting and Advisory business roles in different businesses. Before setting up the HSA he has been served the big 4 EY (Ernst & Young) and various UK accounting practices"
 
       ],
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+      image: "/loveable-uploads/image (34).png"
     },
     {
       name: "Abdul Muqeet",
