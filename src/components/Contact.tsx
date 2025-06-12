@@ -7,6 +7,51 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import AnimatedElement from './AnimatedElement';
 
 const Contact = () => {
+  const [formData, setFormData] = React.useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('https://contact-backend-neon.vercel.app/api/contact.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      if (response.ok) {
+        alert('Message sent successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      alert('Error sending message. Please try again.');
+      console.error(error);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
   return (
     <section id="contact" className="section-padding bg-white relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-accountax-50 to-transparent"></div>
@@ -94,31 +139,71 @@ const Contact = () => {
           
           <AnimatedElement type="slide-in-right" delay={1.6}>
             <div className="bg-white rounded-xl p-8 shadow-xl relative before:absolute before:content-[''] before:top-4 before:right-4 before:-z-10 before:w-full before:h-full before:bg-accountax-100/30 before:rounded-xl">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-accountax-800">Full Name</label>
-                    <Input id="name" placeholder="Your name" className="border-accountax-200 focus:border-accountax-400 focus:ring-accountax-400" />
+                    <Input 
+                      id="name" 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Your name" 
+                      className="border-accountax-200 focus:border-accountax-400 focus:ring-accountax-400" 
+                      required
+                    />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium text-accountax-800">Email Address</label>
-                    <Input id="email" type="email" placeholder="your@email.com" className="border-accountax-200 focus:border-accountax-400 focus:ring-accountax-400" />
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="your@email.com" 
+                      className="border-accountax-200 focus:border-accountax-400 focus:ring-accountax-400" 
+                      required
+                    />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
                   <label htmlFor="phone" className="text-sm font-medium text-accountax-800">Phone Number</label>
-                  <Input id="phone" placeholder="Your phone number" className="border-accountax-200 focus:border-accountax-400 focus:ring-accountax-400" />
+                  <Input 
+                    id="phone" 
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="Your phone number" 
+                    className="border-accountax-200 focus:border-accountax-400 focus:ring-accountax-400" 
+                  />
                 </div>
                 
                 <div className="space-y-2">
                   <label htmlFor="subject" className="text-sm font-medium text-accountax-800">Subject</label>
-                  <Input id="subject" placeholder="How can we help you?" className="border-accountax-200 focus:border-accountax-400 focus:ring-accountax-400" />
+                  <Input 
+                    id="subject" 
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="How can we help you?" 
+                    className="border-accountax-200 focus:border-accountax-400 focus:ring-accountax-400" 
+                    required
+                  />
                 </div>
                 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium text-accountax-800">Message</label>
-                  <Textarea id="message" placeholder="Your message" className="min-h-[120px] border-accountax-200 focus:border-accountax-400 focus:ring-accountax-400" />
+                  <Textarea 
+                    id="message" 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Your message" 
+                    className="min-h-[120px] border-accountax-200 focus:border-accountax-400 focus:ring-accountax-400" 
+                    required
+                  />
                 </div>
                 
                 <Button type="submit" className="w-full bg-accountax-500 hover:bg-accountax-600 shadow-lg shadow-accountax-500/20 hover:shadow-xl hover:shadow-accountax-500/30 transition-all">
