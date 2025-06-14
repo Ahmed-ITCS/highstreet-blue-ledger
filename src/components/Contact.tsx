@@ -97,7 +97,7 @@ const Contact = () => {
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-medium text-accountax-800">Email Us</h4>
-                      <p className="text-accountax-600 mt-1">info@highstreetaccountax.co.uk</p>
+                      <p className="text-accountax-600 mt-1">adrehman@highstreetaccountax.com</p>
                     </div>
                   </div>
                   
@@ -120,11 +120,11 @@ const Contact = () => {
                     <tbody>
                       <tr className="border-b border-accountax-100">
                         <td className="py-3 text-accountax-600">Monday - Friday</td>
-                        <td className="py-3 text-accountax-800 font-medium">9:00 AM - 9:00 PM</td>
+                        <td className="py-3 text-accountax-800 font-medium">9:00 AM - 5:00 PM</td>
                       </tr>
                       <tr className="border-b border-accountax-100">
                         <td className="py-3 text-accountax-600">Saturday</td>
-                        <td className="py-3 text-accountax-800 font-medium">10:00 AM - 4:00 PM</td>
+                        <td className="py-3 text-accountax-800 font-medium">10:00 AM - 3:00 PM</td>
                       </tr>
                       <tr>
                         <td className="py-3 text-accountax-600">Appointments</td>

@@ -7,7 +7,7 @@ import AnimatedElement from './AnimatedElement';
 
 const PricingCard = () => {
   const features = [
-    "First 6 hours free consultation",
+    "First 2 hours free consultation",
   ];
 
   return (
