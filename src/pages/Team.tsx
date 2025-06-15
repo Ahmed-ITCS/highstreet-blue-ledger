@@ -2,6 +2,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import FloatingContactButton from '@/components/FloatingContactButton';
 
 const Team = () => {
   const team = [
