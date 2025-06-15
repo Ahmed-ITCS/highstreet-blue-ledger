@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -11,6 +10,7 @@ import PricingCard from '@/components/PricingCard';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import FloatingContactButton from '@/components/FloatingContactButton';
+import FloatingSocialIcons from '@/components/FloatingSocialIcons';
 
 const Index = () => {
   // Reset scroll position when page loads
@@ -32,6 +32,7 @@ const Index = () => {
         <Contact />
       </main>
       <FloatingContactButton />
+      <FloatingSocialIcons />
       <Footer />
     </div>
   );
