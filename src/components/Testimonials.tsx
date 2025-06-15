@@ -9,7 +9,7 @@ const Testimonials = () => {
   
   const testimonials = [
     {
-      quote: "Highstreet Accountax has transformed our financial operations. Their strategic tax planning saved us over £300,000 last year alone while ensuring full compliance with HMRC regulations.",
+      quote: "Highstreet Accountax has transformed our financial operations. Their strategic tax planning saved us alot of time and money last year alone while ensuring full compliance with HMRC regulations.",
       author: "Sarah Johnson",
       position: "CFO, Johnson Retail Ltd",
       image: "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2076&q=80",
