@@ -4,71 +4,83 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Calculator, ChartBar, FileText, Shield, Search, Settings } from "lucide-react";
 import { Banknote, AlertTriangle,UserCog,Users } from "lucide-react";
 import AnimatedElement from './AnimatedElement';
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
-    {
-      title: "Book Keeping",
-      description: "Accurate and organized financial record-keeping to support informed business decisions and regulatory compliance.",
-      icon: <Calculator className="h-10 w-10 text-accountax-500" />,
-    },
-    {
-      title: "Self Assessment Tax",
-      description: "Expert guidance in filing self-assessment tax returns accurately and on time, ensuring compliance and minimizing liabilities.",
-      icon: <Search className="h-10 w-10 text-accountax-500" />,
-    },
-    {
-      title: "Capital Gains Tax",
-      description: "Specialized advice to help you manage and reduce capital gains tax liabilities through strategic planning and compliance.",
-      icon: <ChartBar className="h-10 w-10 text-accountax-500" />,
-    },
-    {
-      title: "Payroll",
-      description: "Reliable and efficient payroll services to ensure timely employee payments, compliance with regulations, and accurate reporting.",
-      icon: <Shield className="h-10 w-10 text-accountax-500" />,
-    },
-    {
-      title: "Accounts Management",
-      description: "Professional handling of your accounts to ensure accuracy, consistency, and timely financial reporting for better decision-making.",
-      icon: <Settings className="h-10 w-10 text-accountax-500" />,
-    },
-    {
-      title: "Cloud Accounting",
-      description: "Modern accounting solutions using cloud-based platforms to provide real-time access, automation, and enhanced collaboration.",
-      icon: <FileText className="h-10 w-10 text-accountax-500" />,
-    },
-    {
-      title: "Corporation Tax CT600",
-      description: "Comprehensive corporation tax services to ensure compliance, optimize tax efficiency, and support your business growth.",
-      icon: <Banknote className="h-10 w-10 text-accountax-500" />,
-    },
-    {
-      title: "HMRC Tax Investigations",
-      description: "Expert representation and support during HMRC tax investigations to protect your interests and ensure a smooth resolution.",
-      icon: <AlertTriangle className="h-10 w-10 text-accountax-500" />,
-    },
-    {
-      title: "VAT Returns",
-      description: "Expert representation and support during VAT returns to ensure compliance, optimize tax efficiency, and support your business growth.",
-      icon: <FileText className="h-10 w-10 text-accountax-500" />,
-    },
-    {
-      title: "Year End Accounts",
-      description: "Expert representation and support during Year End Accounts to ensure compliance, optimize tax efficiency, and support your business growth.",
-      icon: <FileText className="h-10 w-10 text-accountax-500" />,
-    },
-    {
-      title: "Contractor Accounting",
-      description: "Specialized accounting and tax solutions tailored for contractors, freelancers, and consultants—ensuring IR35 compliance, optimized take-home pay, and stress-free financial management.",
-      icon: <UserCog className="h-10 w-10 text-accountax-500" />,
-    },
-    {
-      title: "Limited Liability Partnerships",
-      description: "Comprehensive accounting and compliance services tailored for Limited Liability Partnerships (LLPs), ensuring accurate profit-sharing, partner tax returns, and full adherence to HMRC and Companies House regulations.",
-      icon: <Users className="h-10 w-10 text-accountax-500" />,
-    }
-    
-  ];
+  {
+    slug: "book-keeping",
+    title: "Book Keeping",
+    description: "Accurate and organized financial record-keeping...",
+    icon: <Calculator className="h-10 w-10 text-accountax-500" />,
+  },
+  {
+    slug: "self-assessment-tax",
+    title: "Self Assessment Tax",
+    description: "Expert guidance in filing self-assessment tax returns...",
+    icon: <Search className="h-10 w-10 text-accountax-500" />,
+  },
+  {
+    slug: "capital-gains-tax",
+    title: "Capital Gains Tax",
+    description: "Specialized advice to help you manage and reduce CGT...",
+    icon: <ChartBar className="h-10 w-10 text-accountax-500" />,
+  },
+  {
+    slug: "payroll",
+    title: "Payroll",
+    description: "Reliable and efficient payroll services...",
+    icon: <Shield className="h-10 w-10 text-accountax-500" />,
+  },
+  {
+    slug: "accounts-management",
+    title: "Accounts Management",
+    description: "Professional handling of your accounts...",
+    icon: <Settings className="h-10 w-10 text-accountax-500" />,
+  },
+  {
+    slug: "cloud-accounting",
+    title: "Cloud Accounting",
+    description: "Modern accounting solutions using cloud-based platforms...",
+    icon: <FileText className="h-10 w-10 text-accountax-500" />,
+  },
+  {
+    slug: "corporation-tax",
+    title: "Corporation Tax CT600",
+    description: "Comprehensive corporation tax services...",
+    icon: <Banknote className="h-10 w-10 text-accountax-500" />,
+  },
+  {
+    slug: "hmrc-tax-investigations",
+    title: "HMRC Tax Investigations",
+    description: "Expert representation and support during HMRC investigations...",
+    icon: <AlertTriangle className="h-10 w-10 text-accountax-500" />,
+  },
+  {
+    slug: "vat-returns",
+    title: "VAT Returns",
+    description: "Expert preparation and submission of VAT returns...",
+    icon: <FileText className="h-10 w-10 text-accountax-500" />,
+  },
+  {
+    slug: "year-end-accounts",
+    title: "Year End Accounts",
+    description: "Preparation of accurate year-end accounts...",
+    icon: <FileText className="h-10 w-10 text-accountax-500" />,
+  },
+  {
+    slug: "contractor-accounting",
+    title: "Contractor Accounting",
+    description: "Specialized accounting solutions for contractors...",
+    icon: <UserCog className="h-10 w-10 text-accountax-500" />,
+  },
+  {
+    slug: "limited-liability-partnerships",
+    title: "Limited Liability Partnerships",
+    description: "Tailored accounting services for LLPs...",
+    icon: <Users className="h-10 w-10 text-accountax-500" />,
+  }
+];
 
   return (
     <section id="services" className="py-20 bg-white relative overflow-hidden">
@@ -126,7 +138,12 @@ const Services = () => {
                 <CardContent className="relative z-10">
                   <CardDescription className="text-accountax-600">{service.description}</CardDescription>
                   <div className="mt-6 flex items-center text-accountax-500 font-medium text-sm group-hover:text-accountax-700 transition-colors">
-                    <span>Learn more</span>
+                    <Link to={`/services/${service.slug}`} className="mt-6 flex items-center text-accountax-500 font-medium text-sm group-hover:text-accountax-700 transition-colors">
+  <span>Learn more</span>
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+  </svg>
+</Link>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
