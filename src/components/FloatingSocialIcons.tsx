@@ -1,21 +1,9 @@
 
 import React from "react";
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter, Youtube , X} from "lucide-react";
 
 // Same social icons and links as in the footer
 const socials = [
-  {
-    name: "Facebook",
-    icon: Facebook,
-    href: "#",
-    color: "bg-blue-600 hover:bg-blue-700",
-  },
-  {
-    name: "Instagram",
-    icon: Instagram,
-    href: "#",
-    color: "bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-400 hover:from-pink-600 hover:to-yellow-500",
-  },
   {
     name: "LinkedIn",
     icon: Linkedin,
@@ -23,17 +11,24 @@ const socials = [
     color: "bg-blue-800 hover:bg-blue-900",
   },
   {
-    name: "Twitter",
-    icon: Twitter,
-    href: "#",
-    color: "bg-cyan-500 hover:bg-cyan-600",
+    name: "Facebook",
+    icon: Facebook,
+    href: "https://www.facebook.com/share/1C6LHz6Rjb/",
+    color: "bg-blue-600 hover:bg-blue-700",
   },
   {
-    name: "YouTube",
-    icon: Youtube,
-    href: "#",
-    color: "bg-red-600 hover:bg-red-700",
+    name: "Instagram",
+    icon: Instagram,
+    href: "https://www.instagram.com/highstreet650?utm_source=qr&igsh=Y2drZGJncDhxb2Yz",
+    color: "bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-400 hover:from-pink-600 hover:to-yellow-500",
   },
+  {
+    name: "X",
+    icon: X,
+    href: "https://x.com/AccountaxLtd?s=08",
+    color: "bg-black hover:bg-neutral-900",
+  },
+ 
 ];
 
 const FloatingSocialIcons: React.FC = () => (
