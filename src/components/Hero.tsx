@@ -33,7 +33,7 @@ const Hero = () => {
             </AnimatedElement>
             
             <AnimatedElement type="slide-in-right" delay={0.8} className="text-lg md:text-xl text-accountax-100 mb-8 max-w-xl">
-              Highstreet Accountax provides bespoke accounting solutions with unmatched expertise and exceptional client service.
+              Highstreet Accountax provides bespoke accounting solutions with unmatched expertise and exceptional client services.
             </AnimatedElement>
             
             <AnimatedElement type="slide-in-bottom" delay={1.0} className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -70,7 +70,6 @@ const Hero = () => {
                   {[
                     { label: "Client Satisfaction", value: "98%", icon: <Activity size={16} className="text-accountax-400" />, delay: 0 },
                     { label: "Tax Returns Filed", value: "10,000+", icon: <BarChart3 size={16} className="text-accountax-400" />, delay: 0.3 },
-                    { label: "Tax Saved for Clients", value: "£100M+", icon: <LineChart size={16} className="text-accountax-400" />, delay: 0.6 }
                   ].map((stat, index) => (
                     <AnimatedElement
                       key={index} 

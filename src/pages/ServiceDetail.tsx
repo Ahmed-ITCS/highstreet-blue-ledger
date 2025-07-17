@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft } from 'lucide-react';
-
+import scrollToContact from '../components/FloatingContactButton';
 const serviceData = {
   'book-keeping': {
     title: "Book Keeping",
@@ -311,7 +311,7 @@ const ServiceDetail = () => {
                     <p className="text-sm text-accountax-700 mb-5">
                       Contact our team to discuss how we can help with your specific requirements.
                     </p>
-                    <Link to="/contact">
+                    <Link to="/#contact" >
                       <Button className="w-full bg-white border border-accountax-300 text-accountax-700 hover:bg-accountax-50">
                         Contact Us
                       </Button>

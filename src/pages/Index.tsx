@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { useLocation } from "react-router-dom";
+
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
@@ -13,10 +15,23 @@ import FloatingContactButton from '@/components/FloatingContactButton';
 import FloatingSocialIcons from '@/components/FloatingSocialIcons';
 
 const Index = () => {
-  // Reset scroll position when page loads
+  const location = useLocation();
+
   useEffect(() => {
+    // Scroll to top on route change
     window.scrollTo(0, 0);
-  }, []);
+
+    // If there's a hash (e.g., #contact), scroll to that element after a slight delay
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const el = document.getElementById(id);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100); // Adjust delay if needed
+      }
+    }
+  }, [location]);
 
   return (
     <div className="min-h-screen">
@@ -29,7 +44,7 @@ const Index = () => {
         <PricingCard />
         <About />
         <OfficePictures />
-        <Contact />
+        <Contact /> {/* This contains id="contact" */}
       </main>
       <FloatingContactButton />
       <FloatingSocialIcons />
