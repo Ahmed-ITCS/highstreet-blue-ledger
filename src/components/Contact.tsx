@@ -85,7 +85,7 @@ const Contact = () => {
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-medium text-accountax-800">Our Location</h4>
-                      <p className="text-accountax-600 mt-1">Bd3 8HD unit 935 Leeds Road</p>
+                      <p className="text-accountax-600 mt-1">935 Leeds Road Bradford, BD3 8HD</p>
                     </div>
                   </div>
                   

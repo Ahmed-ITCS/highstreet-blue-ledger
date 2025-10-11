@@ -59,7 +59,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg py-3' : 'bg-transparent py-6'}`}>
+    <header className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white shadow-lg py-3' : 'bg-white py-6'}`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -68,7 +68,7 @@ const Navbar = () => {
                 <img src="/lovable-uploads/c61e23a0-1d76-4412-8400-554190f2dd5f.jpg" alt="Logo" className="w-full h-full object-contain" />
               </div>
               <span className={`text-2xl font-serif font-bold ${scrolled ? 'text-accountax-800' : 'text-white'} transition-colors duration-300 flex items-center`}>
-                <span className="relative z-10 animate-wiggle">High</span>
+                <span className="relative z-10 animate-wiggle" style={{ color: 'Teal' }}>High</span>
                 <span className="text-accountax-400">street</span>
                 <span className={`ml-1 relative ${scrolled ? 'text-accountax-600' : 'text-accountax-300'}`}>
                   Accountax
@@ -82,16 +82,16 @@ const Navbar = () => {
             {navLinks.map((link) => (
               link.hasDropdown ? (
                 <DropdownMenu key={link.name}>
-                  <DropdownMenuTrigger className={`font-medium transition-colors hover:text-accountax-500 flex items-center focus:outline-none ${
-                    scrolled ? 'text-accountax-800' : 'text-white'
+                  <DropdownMenuTrigger className={`font-medium transition-colors hover:text-teal-500 flex items-center focus:outline-none ${
+                    scrolled ? 'text-teal-800' : 'text-teal-800'
                   }`}>
                     {link.name}
                     <ChevronDown className="ml-1 h-4 w-4" />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="center" className="w-56 bg-white/95 backdrop-blur-md border-accountax-100/20">
+                  <DropdownMenuContent align="center" className="w-56 bg-white border-teal-100/20">
                     {link.items?.map((item) => (
                       <DropdownMenuItem key={item.name} asChild>
-                        <Link to={item.href} className="cursor-pointer text-accountax-800 hover:text-accountax-500 hover:bg-accountax-50 transition-all">
+                        <Link to={item.href} className="cursor-pointer text-teal-800 hover:text-teal-500 hover:bg-teal-50 transition-all">
                           {item.name}
                         </Link>
                       </DropdownMenuItem>
@@ -102,8 +102,8 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`font-medium transition-colors hover:text-accountax-500 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:-bottom-1 after:left-0 after:bg-accountax-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
-                    scrolled ? 'text-accountax-800' : 'text-white'
+                  className={`font-medium transition-colors hover:text-teal-500 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:-bottom-1 after:left-0 after:bg-teal-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
+                    scrolled ? 'text-teal-800' : 'text-teal-800'
                   }`}
                 >
                   {link.name}
@@ -111,7 +111,7 @@ const Navbar = () => {
               )
             ))}
             <Link to="/contact">
-              <Button className="bg-accountax-500 hover:bg-accountax-600 text-white shadow-lg hover:shadow-xl hover:shadow-accountax-500/20 transition-all">
+              <Button className="bg-teal-500 hover:bg-teal-600 text-white shadow-lg hover:shadow-xl hover:shadow-teal-500/20 transition-all">
                 <span>Free Consultation</span>
                 <ChevronRight className="ml-1 h-4 w-4" />
               </Button>
@@ -167,7 +167,7 @@ const Navbar = () => {
               )
             ))}
             <Link to="/contact">
-              <Button className="w-full bg-accountax-500 hover:bg-accountax-600 text-white animate-slide-in-bottom" style={{ animationDelay: '0.25s' }}>
+              <Button className="w-full bg-teal-500 hover:bg-teal-600 text-white animate-slide-in-bottom" style={{ animationDelay: '0.25s' }}>
                 Free Consultation
                 <ChevronRight className="ml-1 h-4 w-4" />
               </Button>

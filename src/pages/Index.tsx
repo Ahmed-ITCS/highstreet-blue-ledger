@@ -40,10 +40,10 @@ const Index = () => {
         <Hero />
         <Services />
         <WhyChooseUs />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <PricingCard />
         <About />
-        <OfficePictures />
+        {/* <OfficePictures />*/}
         <Contact /> {/* This contains id="contact" */}
       </main>
       <FloatingContactButton />
